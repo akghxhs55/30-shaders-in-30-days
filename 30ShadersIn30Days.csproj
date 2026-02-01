@@ -6,7 +6,4 @@
     <RootNamespace>ShadersIn30Days</RootNamespace>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="tools\README.md" />
-  </ItemGroup>
 </Project>

@@ -26,6 +26,7 @@ Understanding UV coordinates is fundamental to shader programming. UV coordinate
 ## Visualization Modes
 
 ### Mode 0: RGB Visualization
+![Mode 0: RGB Visualization](./previews/mode0_rgb.png)
 - **Red channel** = U coordinate (horizontal position)
 - **Green channel** = V coordinate (vertical position)
 - **Blue channel** = 0 (black)
@@ -37,18 +38,21 @@ Understanding UV coordinates is fundamental to shader programming. UV coordinate
 - Bottom-right corner is yellow (U=1, V=1, R+G=Yellow)
 
 ### Mode 1: Horizontal Gradient (U only)
+![Mode 1: Horizontal Gradient (U only)](./previews/mode1_u_gradient.png)
 Shows only the U coordinate as grayscale:
 - Left edge: Black (U=0)
 - Right edge: White (U=1)
 - Smooth gradient in between
 
 ### Mode 2: Vertical Gradient (V only)
+![Mode 2: Vertical Gradient (V only)](./previews/mode2_v_gradient.png)
 Shows only the V coordinate as grayscale:
 - Top edge: Black (V=0)
 - Bottom edge: White (V=1)
 - Smooth gradient in between
 
 ### Mode 3: Centered UV
+![Mode 3: Centered UV](./previews/mode3_centered.png)
 Shifts the origin from top-left to center by subtracting 0.5:
 - Center of surface: (0, 0)
 - Range: -0.5 to 0.5
@@ -62,6 +66,7 @@ Shifts the origin from top-left to center by subtracting 0.5:
 Centering UV is essential for radial effects, rotations, and SDF shapes where calculations need to be relative to the center.
 
 ### Mode 4: Tiling
+![Mode 4: Tiling](./previews/mode4_tiling.png)
 Multiplies UV by 4 and uses `fract()` to repeat the pattern:
 - `fract()` returns the fractional part (0.0 to 1.0)
 - Creates a 4×4 grid of the RGB visualization
@@ -74,6 +79,7 @@ Multiplies UV by 4 and uses `fract()` to repeat the pattern:
 `fract()` is fundamental for creating repeating patterns, textures, and procedural effects.
 
 ### Mode 5: Radial
+![Mode 5: Radial](./previews/mode5_radial.png)
 Calculates distance from center using `length()`:
 - Center is brightest (distance ≈ 0)
 - Corners are darkest (distance ≈ 0.707)

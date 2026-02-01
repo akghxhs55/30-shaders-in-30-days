@@ -11,7 +11,7 @@ This project is a structured journey through shader programming, starting from t
 ### Week 1: Foundation
 | Day | Topic | Status |
 |-----|-------|--------|
-| 01 | UV Basics & Visualization | ✅ |
+| 01 | [UV Basics & Visualization](shaders/week1_foundation/day01_uv_basics/) | ✅ |
 | 02 | Gradient (Linear/Radial) | ⬜ |
 | 03 | Stripes & Checkerboard Patterns | ⬜ |
 | 04 | Circle & Shapes (SDF Intro) | ⬜ |
