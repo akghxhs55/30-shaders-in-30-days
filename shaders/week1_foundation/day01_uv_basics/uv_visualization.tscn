@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c5y8qm7xwbj0d"]
+
+[ext_resource type="Shader" uid="uid://dp5apg41ln1h5" path="res://shaders/week1_foundation/day01_uv_basics/uv_basics.gdshader" id="1_uv_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1"]
+shader = ExtResource("1_uv_shader")
+shader_parameter/mode = 0
+
+[node name="UVVisualization" type="Node2D" unique_id=1329881977]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=170480870]
+material = SubResource("ShaderMaterial_1")
+offset_right = 512.0
+offset_bottom = 512.0
