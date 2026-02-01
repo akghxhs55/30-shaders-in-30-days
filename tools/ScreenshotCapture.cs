@@ -1,12 +1,24 @@
 using System.Collections.Generic;
 using Godot;
 
-namespace ShaderStudy.Tools;
+namespace ShadersIn30Days.tools;
 
 [Tool]
 public partial class ScreenshotCapture : Node
 {
-    [Export] public string OutputFilePath { get; set; } = "res://output.png";
+    [ExportGroup("Output Settings")]
+    [Export(PropertyHint.Dir)]
+    public string OutputDirectory { get; set; } = "res://";
+    
+    [Export]
+    public string FileName
+    {
+        get => _fileName;
+        set => _fileName = value.EndsWith(".png") ? value : value + ".png";
+    }
+    private string _fileName = "output.png";
+
+    private string OutputPath => OutputDirectory.TrimEnd('/') + "/" + FileName;
 
     [ExportToolButton("Capture", Icon = "SubViewport")]
     private Callable CaptureButton => Callable.From(CaptureScreenshot);
@@ -26,14 +38,14 @@ public partial class ScreenshotCapture : Node
         }
 
         var image = viewport.GetTexture().GetImage();
-        var err = image.SavePng(OutputFilePath);
+        var err = image.SavePng(OutputPath);
         if (err != Error.Ok)
         {
             GD.PrintErr($"Failed to save screenshot: {err}");
             return;
         }
 
-        GD.Print($"Screenshot saved to {OutputFilePath}");
+        GD.Print($"Screenshot saved to {OutputPath}");
     }
 
     public override string[] _GetConfigurationWarnings()
