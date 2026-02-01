@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://545un2ll6n0v"]
+
+[ext_resource type="Script" uid="uid://dwvp4ih7ne1ti" path="res://tools/ScreenshotCapture.cs" id="1"]
+
+[node name="ScreenshotCapture" type="Node" unique_id=30603517]
+script = ExtResource("1")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=909994614]
+custom_minimum_size = Vector2(512, 512)
+offset_right = 40.0
+offset_bottom = 40.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=455511232]
+render_target_update_mode = 4
