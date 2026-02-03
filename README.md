@@ -8,7 +8,7 @@ This project is a structured journey through shader programming, starting from t
 
 ## Progress
 
-### Week 1: Foundation
+### Chapter 1: Foundation
 | Day | Topic | Status |
 |-----|-------|--------|
 | 01 | [UV Basics & Visualization](shaders/week1_foundation/day01_uv_basics/) | ✅ |
@@ -19,7 +19,7 @@ This project is a structured journey through shader programming, starting from t
 | 06 | Animation Basics | ⬜ |
 | 07 | **Mini Project**: Animated Loading Spinner | ⬜ |
 
-### Week 2: 2D Game Effects
+### Chapter 2: 2D Game Effects
 | Day | Topic | Status |
 |-----|-------|--------|
 | 08 | Sprite Flash (Hit Effect) | ⬜ |
@@ -30,7 +30,7 @@ This project is a structured journey through shader programming, starting from t
 | 13 | Wave Distortion | ⬜ |
 | 14 | **Mini Project**: 2D Character Effects Combo | ⬜ |
 
-### Week 3: Noise & Procedural Generation
+### Chapter 3: Noise & Procedural Generation
 | Day | Topic | Status |
 |-----|-------|--------|
 | 15 | Value Noise | ⬜ |
@@ -41,7 +41,7 @@ This project is a structured journey through shader programming, starting from t
 | 20 | Procedural Water Surface | ⬜ |
 | 21 | **Mini Project**: Procedural Background | ⬜ |
 
-### Week 4: 3D & Lighting
+### Chapter 4: 3D & Lighting
 | Day | Topic | Status |
 |-----|-------|--------|
 | 22 | Diffuse Lighting (Lambert) | ⬜ |
@@ -52,7 +52,7 @@ This project is a structured journey through shader programming, starting from t
 | 27 | Fresnel + Hologram Effect | ⬜ |
 | 28 | **Mini Project**: Stylized 3D Object | ⬜ |
 
-### Week 5: Post-Processing & Finale
+### Chapter 5: Post-Processing & Finale
 | Day | Topic | Status |
 |-----|-------|--------|
 | 29 | Screen-space Effects (Vignette, Chromatic Aberration) | ⬜ |
@@ -63,16 +63,16 @@ This project is a structured journey through shader programming, starting from t
 ```
 30-shaders-in-30-days/
 ├── shaders/
-│   ├── week1_foundation/
+│   ├── chapter1_foundation/
 │   │   ├── day01_uv_basics/
 │   │   │   ├── uv_basics.gdshader
 │   │   │   ├── uv_basics.tscn
 │   │   │   └── README.md
 │   │   └── ...
-│   ├── week2_2d_effects/
-│   ├── week3_noise/
-│   ├── week4_lighting/
-│   └── week5_postprocess/
+│   ├── chapter2_2d_effects/
+│   ├── chapter3_noise/
+│   ├── chapter4_lighting/
+│   └── chapter5_postprocess/
 ├── assets/
 │   ├── textures/
 │   └── models/
@@ -84,15 +84,15 @@ This project is a structured journey through shader programming, starting from t
     └── test_scene.tscn
 ```
 
-## Key Concepts by Week
+## Key Concepts by Chapter
 
-| Week | Theme | Core Concepts |
-|------|-------|---------------|
-| 1 | Foundation | UV coordinates, `mix()`, `smoothstep()`, SDF basics, TIME animation |
-| 2 | 2D Effects | Texture sampling, UV distortion, color manipulation |
-| 3 | Procedural | Noise functions, FBM, Voronoi, layering techniques |
-| 4 | 3D & Lighting | Normals, dot product, Fresnel, tangent space |
-| 5 | Post-Processing | Screen-space coordinates, full-screen effects |
+| Chapter | Theme | Core Concepts |
+|---------|-------|---------------|
+| 1       | Foundation | UV coordinates, `mix()`, `smoothstep()`, SDF basics, TIME animation |
+| 2       | 2D Effects | Texture sampling, UV distortion, color manipulation |
+| 3       | Procedural | Noise functions, FBM, Voronoi, layering techniques |
+| 4       | 3D & Lighting | Normals, dot product, Fresnel, tangent space |
+| 5       | Post-Processing | Screen-space coordinates, full-screen effects |
 
 ## Environment
 

@@ -1,6 +1,6 @@
 using Godot;
 
-namespace ShadersIn30Days.shaders.week1_foundation.day01_uv_basics;
+namespace ShadersIn30Days.shaders.chapter1_foundation.day01_uv_basics;
 
 [Tool]
 public partial class UvVisualization : Node
