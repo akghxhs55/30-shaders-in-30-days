@@ -173,13 +173,13 @@ public partial class Gradient : Node
         bool hide = false;
         
         // Interpolation parameters
-        hide |= name is "Edge0" or "Edge1" && _interpolation != InterpolationMode.Smoothstep;
-        hide |= name == "Threshold" && _interpolation != InterpolationMode.Step;
-        hide |= name == "CustomCurve" && _interpolation != InterpolationMode.Custom;
+        hide |= name is nameof(Edge0) or nameof(Edge1) && _interpolation != InterpolationMode.Smoothstep;
+        hide |= name == nameof(Threshold) && _interpolation != InterpolationMode.Step;
+        hide |= name == nameof(CustomCurve) && _interpolation != InterpolationMode.Custom;
         
         // Color mapping parameters
-        hide |= name is "ColorA" or "ColorB" && _colorMap != ColorMapMode.TwoColor;
-        hide |= name is "StopColors" && _colorMap != ColorMapMode.MultiStop;
+        hide |= name is nameof(ColorA) or nameof(ColorB) && _colorMap != ColorMapMode.TwoColor;
+        hide |= name is nameof(StopColors) && _colorMap != ColorMapMode.MultiStop;
 
         if (hide)
         {
