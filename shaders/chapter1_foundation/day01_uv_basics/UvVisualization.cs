@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 
 namespace ShadersIn30Days.shaders.chapter1_foundation.day01_uv_basics;
 
@@ -26,6 +27,31 @@ public partial class UvVisualization : Node
         }
     }
     private UVMode _mode = UVMode.RgbVisualization;
+    
+    [Export(PropertyHint.Range, "1,16,")]
+    public int TileRepeats
+    {
+        get => _tileRepeats;
+        set
+        {
+            _tileRepeats = value;
+            UpdateShaderParam("tile_repeats", value);
+        }
+    }
+    private int _tileRepeats = 4;
+
+    public override void _ValidateProperty(Dictionary property)
+    {
+        string name = property["name"].AsStringName().ToString();
+        bool hide = false;
+        
+        hide |= name == nameof(TileRepeats) && Mode != UVMode.Tiling;
+
+        if (hide)
+        {
+            property["usage"] = (int)(property["usage"].As<PropertyUsageFlags>() & ~PropertyUsageFlags.Editor);
+        }
+    }
 
     private ColorRect? GetColorRect() => GetNodeOrNull<ColorRect>("ColorRect");
 

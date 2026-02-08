@@ -9,6 +9,8 @@ uniform int mode : hint_enum(
 	"Radial"
 ) = 0;
 
+uniform int tile_repeats : hint_range(1, 16) = 4;
+
 void fragment() {
 	switch (mode) {
 		case 0:
@@ -28,7 +30,7 @@ void fragment() {
 			break;
 		
 		case 4:
-			COLOR = vec4(fract(UV * 4.0), 0.0, 1.0);
+			COLOR = vec4(fract(UV * float(tile_repeats)), 0.0, 1.0);
 			break;
 		
 		case 5:

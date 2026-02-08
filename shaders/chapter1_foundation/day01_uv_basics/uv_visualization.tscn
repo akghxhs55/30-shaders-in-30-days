@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://c5y8qm7xwbj0d"]
 
-[ext_resource type="Script" uid="uid://ck67geywkg5fa" path="res://shaders/week1_foundation/day01_uv_basics/UvVisualization.cs" id="1_hf2kv"]
-[ext_resource type="Shader" uid="uid://dp5apg41ln1h5" path="res://shaders/week1_foundation/day01_uv_basics/uv_basics.gdshader" id="1_uv_shader"]
+[ext_resource type="Script" uid="uid://ck67geywkg5fa" path="res://shaders/chapter1_foundation/day01_uv_basics/UvVisualization.cs" id="1_hf2kv"]
+[ext_resource type="Shader" uid="uid://dp5apg41ln1h5" path="res://shaders/chapter1_foundation/day01_uv_basics/uv_basics.gdshader" id="1_uv_shader"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1"]
 shader = ExtResource("1_uv_shader")
 shader_parameter/mode = 0
+shader_parameter/tile_repeats = 4
 
 [node name="UvVisualization" type="Node" unique_id=68002653]
 script = ExtResource("1_hf2kv")
