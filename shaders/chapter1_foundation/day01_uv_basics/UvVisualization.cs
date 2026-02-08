@@ -31,7 +31,6 @@ public partial class UvVisualization : Node
 
     private void UpdateShaderParam(StringName name, Variant value)
     {
-        GD.Print(GetColorRect());
         if (GetColorRect()?.Material is ShaderMaterial material)
         {
             material.SetShaderParameter(name, value);
