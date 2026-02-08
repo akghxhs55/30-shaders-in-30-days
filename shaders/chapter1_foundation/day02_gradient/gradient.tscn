@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://setpo5uso16x"]
+
+[ext_resource type="Shader" uid="uid://cabow7ajfwtkt" path="res://shaders/chapter1_foundation/day02_gradient/gradient.gdshader" id="1_heb8f"]
+[ext_resource type="Script" uid="uid://bburliy31qu5b" path="res://shaders/chapter1_foundation/day02_gradient/Gradient.cs" id="1_pq2wm"]
+
+[sub_resource type="CurveTexture" id="CurveTexture_pq2wm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pq2wm"]
+shader = ExtResource("1_heb8f")
+shader_parameter/shape = 0
+shader_parameter/interpolation = 0
+shader_parameter/color_mapping = 0
+shader_parameter/edge0 = 0.3
+shader_parameter/edge1 = 0.7
+shader_parameter/threshold = 0.5
+shader_parameter/custom_curve = SubResource("CurveTexture_pq2wm")
+shader_parameter/color_a = Color(0, 0, 0, 1)
+shader_parameter/color_b = Color(1, 1, 1, 1)
+shader_parameter/color_count = 3
+shader_parameter/stop_colors = PackedColorArray(1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1)
+
+[node name="Gradient" type="Node" unique_id=1207201587]
+script = ExtResource("1_pq2wm")
+CustomCurve = SubResource("CurveTexture_pq2wm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=721609425]
+material = SubResource("ShaderMaterial_pq2wm")
+offset_right = 512.0
+offset_bottom = 512.0

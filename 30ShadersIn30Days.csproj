@@ -6,4 +6,10 @@
     <RootNamespace>ShadersIn30Days</RootNamespace>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="shaders\chapter1_foundation\day01_uv_basics\README.md" />
+    <Content Include="shaders\chapter1_foundation\day01_uv_basics\uv_basics.gdshader" />
+    <Content Include="shaders\chapter1_foundation\day02_gradient\gradient.gdshader" />
+    <Content Include="shaders\chapter1_foundation\day02_gradient\README.md" />
+  </ItemGroup>
 </Project>
