@@ -4,7 +4,7 @@ using Godot.Collections;
 namespace ShadersIn30Days.shaders.chapter1_foundation.day01_uv_basics;
 
 [Tool]
-public partial class UvVisualization : Node
+public partial class UvBasics : Node
 {
     public enum UVMode
     {

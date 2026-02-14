@@ -166,6 +166,6 @@ void fragment() {
 ## Files
 
 - `uv_basics.gdshader` - The shader implementation
-- `uv_visualization.tscn` - Test scene with ColorRect
-- `UvVisualization.cs` - C# wrapper exposing shader parameters to the Inspector
+- `uv_basics.tscn` - Test scene with ColorRect
+- `UvBasics.cs` - C# wrapper exposing shader parameters to the Inspector
 - `README.md` - This documentation
