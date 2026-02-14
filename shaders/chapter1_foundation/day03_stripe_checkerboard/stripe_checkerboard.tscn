@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dinrc7eff31h6"]
+
+[ext_resource type="Shader" uid="uid://cgi336x1abuem" path="res://shaders/chapter1_foundation/day03_stripe_checkerboard/stripe_checkerboard.gdshader" id="1_eecxn"]
+[ext_resource type="Script" uid="uid://b8mbtunp1igm6" path="res://shaders/chapter1_foundation/day03_stripe_checkerboard/StripeCheckerboard.cs" id="1_yf2ul"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yf2ul"]
+shader = ExtResource("1_eecxn")
+shader_parameter/pattern = 0
+shader_parameter/frequency = 8.0
+shader_parameter/direction = 0
+shader_parameter/duty_cycle = 0.5
+shader_parameter/line_thickness = 0.1
+shader_parameter/dot_radius = 0.2
+shader_parameter/color_a = Color(0, 0, 0, 1)
+shader_parameter/color_b = Color(1, 1, 1, 1)
+
+[node name="StripeCheckerboard" type="Node" unique_id=374659862]
+script = ExtResource("1_yf2ul")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=387753805]
+material = SubResource("ShaderMaterial_yf2ul")
+offset_right = 512.0
+offset_bottom = 512.0

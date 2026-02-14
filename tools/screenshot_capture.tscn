@@ -4,8 +4,6 @@
 
 [node name="ScreenshotCapture" type="Node" unique_id=30603517]
 script = ExtResource("1")
-OutputDirectory = "res://shaders/chapter1_foundation/day02_gradient/previews"
-FileName = "color_multistop.png"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=909994614]
 custom_minimum_size = Vector2(512, 512)
