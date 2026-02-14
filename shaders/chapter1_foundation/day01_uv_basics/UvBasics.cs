@@ -45,7 +45,7 @@ public partial class UvBasics : Node
         string name = property["name"].AsStringName().ToString();
         bool hide = false;
         
-        hide |= name == nameof(TileRepeats) && Mode != UVMode.Tiling;
+        hide |= name is nameof(TileRepeats) && Mode != UVMode.Tiling;
 
         if (hide)
         {
