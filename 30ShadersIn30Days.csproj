@@ -7,8 +7,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="shaders\chapter1_foundation\day03_stripe_checkerboard\previews\.gdignore" />
-    <Content Include="shaders\chapter1_foundation\day03_stripe_checkerboard\previews\stripes.png" />
-    <Content Include="shaders\chapter1_foundation\day03_stripe_checkerboard\README.md" />
+    <None Include="**/*.gdshader" />
   </ItemGroup>
 </Project>
