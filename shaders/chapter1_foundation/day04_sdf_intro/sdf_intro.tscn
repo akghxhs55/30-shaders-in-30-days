@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://32hsy6715p8i"]
+
+[ext_resource type="Shader" uid="uid://fde718hp6axj" path="res://shaders/chapter1_foundation/day04_sdf_intro/sdf_intro.gdshader" id="1_1hyg6"]
+[ext_resource type="Script" uid="uid://iox5kjjb7w8s" path="res://shaders/chapter1_foundation/day04_sdf_intro/SdfIntro.cs" id="1_de87e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_de87e"]
+shader = ExtResource("1_1hyg6")
+shader_parameter/shape_a = 0
+shader_parameter/position_a = Vector2(-0.15, 0)
+shader_parameter/radius_a = 0.3
+shader_parameter/size_a = Vector2(0.3, 0.2)
+shader_parameter/corner_radius_a = 0.05
+shader_parameter/ring_thickness_a = 0.05
+shader_parameter/shape_b = 0
+shader_parameter/position_b = Vector2(0.15, 0)
+shader_parameter/radius_b = 0.3
+shader_parameter/size_b = Vector2(0.3, 0.2)
+shader_parameter/corner_radius_b = 0.05
+shader_parameter/ring_thickness_b = 0.05
+shader_parameter/operation = 0
+shader_parameter/visualization = 0
+shader_parameter/band_frequency = 8.0
+shader_parameter/shape_color = Color(1, 1, 1, 1)
+shader_parameter/background_color = Color(0, 0, 0, 1)
+
+[node name="SdfIntro" type="Node" unique_id=1207316426]
+script = ExtResource("1_de87e")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1287551548]
+material = SubResource("ShaderMaterial_de87e")
+offset_right = 512.0
+offset_bottom = 512.0

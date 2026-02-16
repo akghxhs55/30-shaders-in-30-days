@@ -14,7 +14,7 @@ This project is a structured journey through shader programming, starting from t
 | 01 | [UV Basics & Visualization](shaders/week1_foundation/day01_uv_basics/)                | ✅ |
 | 02 | [Gradient](shaders/week1_foundation/day02_gradient/)                                  | ✅ |
 | 03 | [Stripes & Checkerboard Patterns](shaders/week1_foundation/day03_stripe_checkerboard) | ✅ |
-| 04 | Circle & Shapes (SDF Intro)                                                           | ⬜ |
+| 04 | [Circle & Shapes (SDF Intro)](shaders/week1_foundation/day04_sdf_intro)               | ✅ |
 | 05 | Soft Shapes & Anti-aliasing                                                           | ⬜ |
 | 06 | Animation Basics                                                                      | ⬜ |
 | 07 | **Mini Project**: Animated Loading Spinner                                            | ⬜ |
