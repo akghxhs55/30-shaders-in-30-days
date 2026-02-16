@@ -4,6 +4,8 @@
 
 [node name="ScreenshotCapture" type="Node" unique_id=30603517]
 script = ExtResource("1")
+OutputDirectory = "res://shaders/chapter1_foundation/day04_sdf_intro/previews"
+FileName = "vis_stepped.png"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=909994614]
 custom_minimum_size = Vector2(512, 512)
