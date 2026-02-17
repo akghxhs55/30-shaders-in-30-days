@@ -67,21 +67,14 @@ This project is a structured journey through shader programming, starting from t
 │   │   ├── day01_uv_basics/
 │   │   │   ├── uv_basics.gdshader
 │   │   │   ├── uv_basics.tscn
+│   │   │   ├── UvBasics.cs
 │   │   │   └── README.md
 │   │   └── ...
 │   ├── chapter2_2d_effects/
 │   ├── chapter3_noise/
 │   ├── chapter4_lighting/
 │   └── chapter5_postprocess/
-├── assets/
-│   ├── textures/
-│   └── models/
 ├── previews/
-├── common/
-│   └── shader_utils.gdshaderinc
-└── scenes/
-	├── gallery.tscn
-	└── test_scene.tscn
 ```
 
 ## Key Concepts by Chapter
