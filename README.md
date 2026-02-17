@@ -11,10 +11,10 @@ This project is a structured journey through shader programming, starting from t
 ### Chapter 1: Foundation
 | Day | Topic                                                                                 | Status |
 |-----|---------------------------------------------------------------------------------------|--------|
-| 01 | [UV Basics & Visualization](shaders/week1_foundation/day01_uv_basics/)                | ✅ |
-| 02 | [Gradient](shaders/week1_foundation/day02_gradient/)                                  | ✅ |
-| 03 | [Stripes & Checkerboard Patterns](shaders/week1_foundation/day03_stripe_checkerboard) | ✅ |
-| 04 | [Circle & Shapes (SDF Intro)](shaders/week1_foundation/day04_sdf_intro)               | ✅ |
+| 01 | [UV Basics & Visualization](shaders/chapter1_foundation/day01_uv_basics/)             | ✅ |
+| 02 | [Gradient](shaders/chapter1_foundation/day02_gradient/)                                  | ✅ |
+| 03 | [Stripes & Checkerboard Patterns](shaders/chapter1_foundation/day03_stripe_checkerboard) | ✅ |
+| 04 | [Circle & Shapes (SDF Intro)](shaders/chapter1_foundation/day04_sdf_intro)               | ✅ |
 | 05 | Soft Shapes & Anti-aliasing                                                           | ⬜ |
 | 06 | Animation Basics                                                                      | ⬜ |
 | 07 | **Mini Project**: Animated Loading Spinner                                            | ⬜ |
@@ -80,8 +80,8 @@ This project is a structured journey through shader programming, starting from t
 ├── common/
 │   └── shader_utils.gdshaderinc
 └── scenes/
-    ├── gallery.tscn
-    └── test_scene.tscn
+	├── gallery.tscn
+	└── test_scene.tscn
 ```
 
 ## Key Concepts by Chapter
