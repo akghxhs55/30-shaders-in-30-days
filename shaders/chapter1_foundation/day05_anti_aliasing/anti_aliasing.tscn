@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dk777j1buq7qd"]
+
+[ext_resource type="Shader" uid="uid://bglghv0uv8d2t" path="res://shaders/chapter1_foundation/day05_anti_aliasing/anti_aliasing.gdshader" id="1_sdy1t"]
+[ext_resource type="Script" uid="uid://ce0fqslwyr2qc" path="res://shaders/chapter1_foundation/day05_anti_aliasing/AntiAliasing.cs" id="1_vwe0k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vwe0k"]
+shader = ExtResource("1_sdy1t")
+shader_parameter/edge_type = 0
+shader_parameter/softness = 0.05
+shader_parameter/glow_enabled = false
+shader_parameter/glow_falloff = 16.0
+shader_parameter/glow_color = Color(0, 0.655, 1, 1)
+shader_parameter/shadow_enabled = false
+shader_parameter/shadow_offset = Vector2(0.02, 0.02)
+shader_parameter/shadow_softness = 0.05
+shader_parameter/shadow_color = Color(0, 0, 0, 0.5)
+shader_parameter/radius = 0.3
+shader_parameter/shape_color = Color(0, 0, 0, 1)
+shader_parameter/background_color = Color(1, 1, 1, 1)
+
+[node name="AntiAliasing" type="Node" unique_id=1779856477]
+script = ExtResource("1_vwe0k")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1242226110]
+material = SubResource("ShaderMaterial_vwe0k")
+offset_right = 512.0
+offset_bottom = 512.0
