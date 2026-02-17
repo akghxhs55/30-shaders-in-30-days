@@ -9,15 +9,15 @@ This project is a structured journey through shader programming, starting from t
 ## Progress
 
 ### Chapter 1: Foundation
-| Day | Topic                                                                                   | Status |
-|-----|-----------------------------------------------------------------------------------------|--------|
-| 01 | [UV Basics & Visualization](shaders/chapter1_foundation/day01_uv_basics/)               | ✅ |
-| 02 | [Gradient](shaders/chapter1_foundation/day02_gradient/)                                 | ✅ |
+| Day | Topic                                                                                    | Status |
+|-----|------------------------------------------------------------------------------------------|--------|
+| 01 | [UV Basics & Visualization](shaders/chapter1_foundation/day01_uv_basics/)                | ✅ |
+| 02 | [Gradient](shaders/chapter1_foundation/day02_gradient/)                                  | ✅ |
 | 03 | [Stripes & Checkerboard Patterns](shaders/chapter1_foundation/day03_stripe_checkerboard) | ✅ |
-| 04 | [Circle & Shapes (SDF Intro)](shaders/chapter1_foundation/day04_sdf_intro)              | ✅ |
-| 05 | [Soft Shapes & Anti-aliasing](shaders/chapter1_foundation/day05/anti_aliasing)          | ✅ |
-| 06 | Animation Basics                                                                        | ⬜ |
-| 07 | **Mini Project**: Animated Loading Spinner                                              | ⬜ |
+| 04 | [Circle & Shapes (SDF Intro)](shaders/chapter1_foundation/day04_sdf_intro)               | ✅ |
+| 05 | [Soft Shapes & Anti-aliasing](shaders/chapter1_foundation/day05_anti_aliasing)           | ✅ |
+| 06 | Animation Basics                                                                         | ⬜ |
+| 07 | **Mini Project**: Animated Loading Spinner                                               | ⬜ |
 
 ### Chapter 2: 2D Game Effects
 | Day | Topic | Status |
