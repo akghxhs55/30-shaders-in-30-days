@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://80tteoul8y1r"]
+
+[ext_resource type="Script" uid="uid://cvfxc0i2wkcdb" path="res://shaders/chapter1_foundation/day06_animation/Animation.cs" id="1_gslg8"]
+[ext_resource type="Shader" uid="uid://de0a863vh85tc" path="res://shaders/chapter1_foundation/day06_animation/animation.gdshader" id="1_vghri"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gslg8"]
+shader = ExtResource("1_vghri")
+shader_parameter/animation_mode = 0
+shader_parameter/speed = 1.0
+shader_parameter/transition = 0
+shader_parameter/easing = 0
+
+[node name="Animation" type="Node" unique_id=2054132682]
+script = ExtResource("1_gslg8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=124110134]
+material = SubResource("ShaderMaterial_gslg8")
+offset_right = 512.0
+offset_bottom = 512.0

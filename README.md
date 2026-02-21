@@ -16,7 +16,7 @@ This project is a structured journey through shader programming, starting from t
 | 03 | [Stripes & Checkerboard Patterns](shaders/chapter1_foundation/day03_stripe_checkerboard) | ✅ |
 | 04 | [Circle & Shapes (SDF Intro)](shaders/chapter1_foundation/day04_sdf_intro)               | ✅ |
 | 05 | [Soft Shapes & Anti-aliasing](shaders/chapter1_foundation/day05_anti_aliasing)           | ✅ |
-| 06 | Animation Basics                                                                         | ⬜ |
+| 06 | [Animation Basics](shaders/chapter1_foundation/day06_animation)                          | ✅ |
 | 07 | **Mini Project**: Animated Loading Spinner                                               | ⬜ |
 
 ### Chapter 2: 2D Game Effects
