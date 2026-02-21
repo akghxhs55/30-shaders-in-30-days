@@ -22,11 +22,54 @@ public partial class ScreenshotCapture : Node
 
     [ExportToolButton("Capture", Icon = "SubViewport")]
     private Callable CaptureButton => Callable.From(CaptureScreenshot);
+    
+    [ExportGroup("Animation Capture")]
+    [Export(PropertyHint.Range, "0.1,5.0,")]
+    public float Duration { get; set; } = 2.0f;
 
-    private SubViewport? GetSubViewport() => 
-        GetNodeOrNull<SubViewportContainer>("SubViewportContainer")?
-            .GetNodeOrNull<SubViewport>("SubViewport");
+    [Export(PropertyHint.Range, "10,30,")]
+    public int Fps { get; set; } = 15;
 
+    [ExportToolButton("Capture Animation", Icon = "Animation")]
+    private Callable CaptureAnimationButton => Callable.From(StartAnimationCapture);
+
+    private bool _capturing = false;
+    private float _elapsed = 0.0f;
+    private int _frameCount = 0;
+    private float _frameInterval = 0.0f;
+    private float _timeSinceLastFrame = 0.0f;
+
+    public override void _Process(double delta)
+    {
+        if (!Engine.IsEditorHint() || !_capturing) return;
+
+        _elapsed += (float)delta;
+        _timeSinceLastFrame += (float)delta;
+
+        if (_timeSinceLastFrame >= _frameInterval)
+        {
+            _timeSinceLastFrame -= _frameInterval;
+            CaptureFrame();
+        }
+
+        if (_elapsed >= Duration)
+        {
+            _capturing = false;
+            GD.Print($"Animation capture complete: {_frameCount} frames saved");
+        }
+    }
+    
+    public override string[] _GetConfigurationWarnings()
+    {
+        var warnings = new List<string>();
+
+        if (GetSubViewport() == null)
+        {
+            warnings.Add("SubViewport node is missing. Please add a SubViewport as a child.");
+        }
+
+        return warnings.ToArray();
+    }
 
     private void CaptureScreenshot()
     {
@@ -47,16 +90,42 @@ public partial class ScreenshotCapture : Node
 
         GD.Print($"Screenshot saved to {OutputPath}");
     }
-
-    public override string[] _GetConfigurationWarnings()
+    
+    private void StartAnimationCapture()
     {
-        var warnings = new List<string>();
-
-        if (GetSubViewport() == null)
+        var viewport = GetSubViewport();
+        if (viewport == null)
         {
-            warnings.Add("SubViewport node is missing. Please add a SubViewport as a child.");
+            GD.PrintErr("SubViewport not found!");
+            return;
         }
 
-        return warnings.ToArray();
+        _capturing = true;
+        _elapsed = 0.0f;
+        _frameCount = 0;
+        _frameInterval = 1.0f / Fps;
+        _timeSinceLastFrame = _frameInterval; // 첫 프레임 즉시 캡처
+
+        GD.Print($"Starting animation capture: {Duration}s at {Fps}fps");
     }
+
+    private void CaptureFrame()
+    {
+        var viewport = GetSubViewport();
+        if (viewport == null) return;
+
+        string baseName = FileName.Replace(".png", "");
+        string framePath = OutputDirectory.TrimEnd('/') + $"/{baseName}_{_frameCount:D4}.png";
+
+        var image = viewport.GetTexture().GetImage();
+        var err = image.SavePng(framePath);
+        if (err == Error.Ok)
+            _frameCount++;
+        else
+            GD.PrintErr($"Failed to save frame {_frameCount}: {err}");
+    }
+    
+    private SubViewport? GetSubViewport() => 
+        GetNodeOrNull<SubViewportContainer>("SubViewportContainer")?
+            .GetNodeOrNull<SubViewport>("SubViewport");
 }
