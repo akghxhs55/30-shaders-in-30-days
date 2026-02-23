@@ -11,3 +11,7 @@
 CLAUDE.md
 .gemini/
 GEMINI.md
+
+# Build artifacts
+tools/uniform_wrapper_generator/bin/
+tools/uniform_wrapper_generator/obj/

@@ -9,4 +9,7 @@
   <ItemGroup>
     <None Include="**/*.gdshader" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="tools\uniform_wrapper_generator\README.md" />
+  </ItemGroup>
 </Project>
