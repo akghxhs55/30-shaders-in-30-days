@@ -6,7 +6,6 @@ namespace ShadersIn30Days.tools;
 [Tool]
 public partial class ScreenshotCapture : Node
 {
-    [ExportGroup("Output Settings")]
     [Export(PropertyHint.Dir)]
     public string OutputDirectory { get; set; } = "res://";
     
@@ -20,18 +19,18 @@ public partial class ScreenshotCapture : Node
 
     private string OutputPath => OutputDirectory.TrimEnd('/') + "/" + FileName;
 
-    [ExportToolButton("Capture", Icon = "SubViewport")]
+    [ExportToolButton("Capture Image", Icon = "SubViewport")]
     private Callable CaptureButton => Callable.From(CaptureScreenshot);
     
-    [ExportGroup("Animation Capture")]
+    [ExportToolButton("Capture Animation", Icon = "Animation")]
+    private Callable CaptureAnimationButton => Callable.From(StartAnimationCapture);
+    
+    [ExportGroup("Animation Capture Settings")]
     [Export(PropertyHint.Range, "0.1,5.0,")]
     public float Duration { get; set; } = 2.0f;
 
     [Export(PropertyHint.Range, "10,30,")]
     public int Fps { get; set; } = 15;
-
-    [ExportToolButton("Capture Animation", Icon = "Animation")]
-    private Callable CaptureAnimationButton => Callable.From(StartAnimationCapture);
 
     private bool _capturing = false;
     private float _elapsed = 0.0f;

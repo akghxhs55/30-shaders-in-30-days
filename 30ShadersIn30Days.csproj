@@ -10,6 +10,6 @@
     <None Include="**/*.gdshader" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="tools\uniform_wrapper_generator\README.md" />
+    <Compile Remove="tools/uniform_wrapper_generator/**" />
   </ItemGroup>
 </Project>
