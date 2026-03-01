@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 
 project/assembly_name="30ShadersIn30Days"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/shader-previewer/plugin.cfg")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

@@ -2,6 +2,9 @@
 .godot/
 /android/
 
+# https://github.com/cashew-olddew/godot-shader-previewer
+addons/shader-previewer
+
 .idea/
 *.DotSettings.user
 
