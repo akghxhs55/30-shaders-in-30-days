@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cma3ld2imq1gf"]
+
+[ext_resource type="Shader" uid="uid://c4l4o31ilk6ub" path="res://shaders/chapter1_foundation/day07_spinner/spinner.gdshader" id="1_5daf4"]
+[ext_resource type="Script" uid="uid://csx2njiwm0jhh" path="res://shaders/chapter1_foundation/day07_spinner/Spinner.cs" id="1_idfs2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_idfs2"]
+shader = ExtResource("1_5daf4")
+shader_parameter/mode = 0
+shader_parameter/speed = 1.0
+
+[node name="Spinner" type="Node" unique_id=351953853]
+script = ExtResource("1_idfs2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1754300866]
+material = SubResource("ShaderMaterial_idfs2")
+offset_left = 2.0
+offset_right = 514.0
+offset_bottom = 512.0

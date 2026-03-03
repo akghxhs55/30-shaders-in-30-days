@@ -17,7 +17,7 @@ This project is a structured journey through shader programming, starting from t
 | 04 | [Circle & Shapes (SDF Intro)](shaders/chapter1_foundation/day04_sdf_intro)               | ✅ |
 | 05 | [Soft Shapes & Anti-aliasing](shaders/chapter1_foundation/day05_anti_aliasing)           | ✅ |
 | 06 | [Animation Basics](shaders/chapter1_foundation/day06_animation)                          | ✅ |
-| 07 | **Mini Project**: Animated Loading Spinner                                               | ⬜ |
+| 07 | [**Mini Project**: Animated Loading Spinner](shaders/chapter1_foundation/day07_spinner)  | ✅ |
 
 ### Chapter 2: 2D Game Effects
 | Day | Topic | Status |
