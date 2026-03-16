@@ -135,15 +135,15 @@ internal static class Program
     
     private static string GenerateDefaultProperty(UniformInfo uniform, string propertyName, string typeName)
     {
-        return $$$"""
+        return $$"""
                   [Export]
-                  public {{{typeName}}} {{{propertyName}}}
+                  public {{typeName}} {{propertyName}}
                   {
-                      get => _{{{ToCamelCase(propertyName)}}};
+                      get => _{{ToCamelCase(propertyName)}};
                       set
                       {
-                          _{{{ToCamelCase(propertyName)}}} = value;
-                          UpdateShaderParam("{{{uniform.Name}}}", value);
+                          _{{ToCamelCase(propertyName)}} = value;
+                          UpdateShaderParam("{{uniform.Name}}", value);
                       }
                   }
                   private {{typeName}} _{{ToCamelCase(propertyName)}} = {{ConvertInitializer(uniform.Initializer, typeName)}};
