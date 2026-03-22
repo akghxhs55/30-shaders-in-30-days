@@ -8,6 +8,15 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="**/*.gdshader" />
+    <None Include="**/*.gdshaderinc" />
+    <None Include="**/*.tscn" />
+    <None Include="**/*.md" />
+    <None Include="**/*.json" />
+    <None Include="**/*.txt" />
+    <None Include="**/*.svg" />
+    <None Include="**/.gitignore" />
+    <None Include="**/.editorconfig" />
+    <None Include="**/.gdignore" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="tools/uniform_wrapper_generator/**" />
