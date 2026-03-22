@@ -18,7 +18,9 @@ internal static class Program
         string path = args[0];
         string source = File.ReadAllText(path);
 
-        string[] statements = source.Split(';', '}');
+        string cleaned = Regex.Replace(source, @"//.*", "");
+
+        string[] statements = cleaned.Split(';', '}');
         var uniformStatements = statements
             .Select(s => s.Trim())
             .Where(s => s.StartsWith("uniform"));
