@@ -23,7 +23,7 @@ This project is a structured journey through shader programming, starting from t
 | Day | Topic                                                       | Status |
 |-----|-------------------------------------------------------------|--------|
 | 08  | [Sprite Flash](shaders/chapter2_effects/day08_sprite_flash) | ✅      |
-| 09  | Dissolve Effect                                             | ⬜      |
+| 09  | [Dissolve Effect](shaders/chapter2_effects/day09_dissolve)  | ✅      |
 | 10  | Outline Shader                                              | ⬜      |
 | 11  | Color Swap / Palette Shift                                  | ⬜      |
 | 12  | Pixelation                                                  | ⬜      |

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dgqcgeosufv0w"]
+
+[ext_resource type="Shader" uid="uid://b2atu30kgiy05" path="res://shaders/chapter2_effects/day09_dissolve/dissolve.gdshader" id="1_46y4c"]
+[ext_resource type="Script" uid="uid://drrffxenne635" path="res://shaders/chapter2_effects/day09_dissolve/Dissolve.cs" id="1_lfhw0"]
+[ext_resource type="Texture2D" uid="uid://dktxafisdk030" path="res://assets/textures/icon_transparent.svg" id="2_toh77"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_lfhw0"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_b5fnn"]
+noise = SubResource("FastNoiseLite_lfhw0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dsah1"]
+shader = ExtResource("1_46y4c")
+shader_parameter/dissolve_mode = 0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_b5fnn")
+shader_parameter/angle = 0.0
+shader_parameter/edge_mode = 0
+shader_parameter/softness = 0.5
+shader_parameter/burn_width = 0.1
+shader_parameter/threshold = 0.0
+
+[node name="Dissolve" type="Node" unique_id=31263409]
+script = ExtResource("1_lfhw0")
+NoiseTexture = SubResource("NoiseTexture2D_b5fnn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=865888697]
+material = SubResource("ShaderMaterial_dsah1")
+texture = ExtResource("2_toh77")
+centered = false
