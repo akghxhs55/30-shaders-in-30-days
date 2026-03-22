@@ -11,52 +11,52 @@ This project is a structured journey through shader programming, starting from t
 ### Chapter 1: Foundation
 | Day | Topic                                                                                    | Status |
 |-----|------------------------------------------------------------------------------------------|--------|
-| 01 | [UV Basics & Visualization](shaders/chapter1_foundation/day01_uv_basics/)                | ✅ |
-| 02 | [Gradient](shaders/chapter1_foundation/day02_gradient/)                                  | ✅ |
-| 03 | [Stripes & Checkerboard Patterns](shaders/chapter1_foundation/day03_stripe_checkerboard) | ✅ |
-| 04 | [Circle & Shapes (SDF Intro)](shaders/chapter1_foundation/day04_sdf_intro)               | ✅ |
-| 05 | [Soft Shapes & Anti-aliasing](shaders/chapter1_foundation/day05_anti_aliasing)           | ✅ |
-| 06 | [Animation Basics](shaders/chapter1_foundation/day06_animation)                          | ✅ |
-| 07 | [**Mini Project**: Animated Loading Spinner](shaders/chapter1_foundation/day07_spinner)  | ✅ |
+| 01  | [UV Basics & Visualization](shaders/chapter1_foundation/day01_uv_basics)                 | ✅      |
+| 02  | [Gradient](shaders/chapter1_foundation/day02_gradient)                                   | ✅      |
+| 03  | [Stripes & Checkerboard Patterns](shaders/chapter1_foundation/day03_stripe_checkerboard) | ✅      |
+| 04  | [Circle & Shapes (SDF Intro)](shaders/chapter1_foundation/day04_sdf_intro)               | ✅      |
+| 05  | [Soft Shapes & Anti-aliasing](shaders/chapter1_foundation/day05_anti_aliasing)           | ✅      |
+| 06  | [Animation Basics](shaders/chapter1_foundation/day06_animation)                          | ✅      |
+| 07  | [**Mini Project**: Animated Loading Spinner](shaders/chapter1_foundation/day07_spinner)  | ✅      |
 
 ### Chapter 2: 2D Game Effects
-| Day | Topic | Status |
-|-----|-------|--------|
-| 08 | Sprite Flash | ✅      |
-| 09 | Dissolve Effect | ⬜      |
-| 10 | Outline Shader | ⬜      |
-| 11 | Color Swap / Palette Shift | ⬜      |
-| 12 | Pixelation | ⬜      |
-| 13 | Wave Distortion | ⬜      |
-| 14 | **Mini Project**: 2D Character Effects Combo | ⬜      |
+| Day | Topic                                                       | Status |
+|-----|-------------------------------------------------------------|--------|
+| 08  | [Sprite Flash](shaders/chapter2_effects/day08_sprite_flash) | ✅      |
+| 09  | Dissolve Effect                                             | ⬜      |
+| 10  | Outline Shader                                              | ⬜      |
+| 11  | Color Swap / Palette Shift                                  | ⬜      |
+| 12  | Pixelation                                                  | ⬜      |
+| 13  | Wave Distortion                                             | ⬜      |
+| 14  | **Mini Project**: 2D Character Effects Combo                | ⬜      |
 
 ### Chapter 3: Noise & Procedural Generation
-| Day | Topic | Status |
-|-----|-------|--------|
-| 15 | Value Noise | ⬜ |
-| 16 | Perlin/Simplex Noise | ⬜ |
-| 17 | FBM (Fractal Brownian Motion) | ⬜ |
-| 18 | Voronoi / Cellular Noise | ⬜ |
-| 19 | Procedural Fire | ⬜ |
-| 20 | Procedural Water Surface | ⬜ |
-| 21 | **Mini Project**: Procedural Background | ⬜ |
+| Day | Topic                                   | Status |
+|-----|-----------------------------------------|--------|
+| 15  | Value Noise                             | ⬜      |
+| 16  | Perlin/Simplex Noise                    | ⬜      |
+| 17  | FBM (Fractal Brownian Motion)           | ⬜      |
+| 18  | Voronoi / Cellular Noise                | ⬜      |
+| 19  | Procedural Fire                         | ⬜      |
+| 20  | Procedural Water Surface                | ⬜      |
+| 21  | **Mini Project**: Procedural Background | ⬜      |
 
 ### Chapter 4: 3D & Lighting
-| Day | Topic | Status |
-|-----|-------|--------|
-| 22 | Diffuse Lighting (Lambert) | ⬜ |
-| 23 | Specular (Blinn-Phong) | ⬜ |
-| 24 | Rim Lighting | ⬜ |
-| 25 | Normal Mapping | ⬜ |
-| 26 | Toon/Cel Shading | ⬜ |
-| 27 | Fresnel + Hologram Effect | ⬜ |
-| 28 | **Mini Project**: Stylized 3D Object | ⬜ |
+| Day | Topic                                | Status |
+|-----|--------------------------------------|--------|
+| 22  | Diffuse Lighting (Lambert)           | ⬜      |
+| 23  | Specular (Blinn-Phong)               | ⬜      |
+| 24  | Rim Lighting                         | ⬜      |
+| 25  | Normal Mapping                       | ⬜      |
+| 26  | Toon/Cel Shading                     | ⬜      |
+| 27  | Fresnel + Hologram Effect            | ⬜      |
+| 28  | **Mini Project**: Stylized 3D Object | ⬜      |
 
 ### Chapter 5: Post-Processing & Finale
-| Day | Topic | Status |
-|-----|-------|--------|
-| 29 | Screen-space Effects (Vignette, Chromatic Aberration) | ⬜ |
-| 30 | **Final Project**: 2048 Shader Edition Prototype | ⬜ |
+| Day | Topic                                                 | Status |
+|-----|-------------------------------------------------------|--------|
+| 29  | Screen-space Effects (Vignette, Chromatic Aberration) | ⬜      |
+| 30  | **Final Project**: 2048 Shader Edition Prototype      | ⬜      |
 
 ## Project Structure
 
