@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cf1gr4rb7713x"]
+
+[ext_resource type="Script" uid="uid://d4iu677cg80rl" path="res://shaders/chapter2_effects/day08_sprite_flash/SpriteFlash.cs" id="1_jd53k"]
+[ext_resource type="Shader" uid="uid://deersokcfortk" path="res://shaders/chapter2_effects/day08_sprite_flash/sprite_flash.gdshader" id="2_jd53k"]
+[ext_resource type="Texture2D" uid="uid://dktxafisdk030" path="res://assets/textures/icon_transparent.svg" id="3_fhj87"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fhj87"]
+shader = ExtResource("2_jd53k")
+shader_parameter/flash_amount = 0.0
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+
+[node name="SpriteFlash" type="Node" unique_id=351953853]
+script = ExtResource("1_jd53k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1313662104]
+material = SubResource("ShaderMaterial_fhj87")
+texture = ExtResource("3_fhj87")
+centered = false

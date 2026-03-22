@@ -22,13 +22,13 @@ This project is a structured journey through shader programming, starting from t
 ### Chapter 2: 2D Game Effects
 | Day | Topic | Status |
 |-----|-------|--------|
-| 08 | Sprite Flash (Hit Effect) | ⬜ |
-| 09 | Dissolve Effect | ⬜ |
-| 10 | Outline Shader | ⬜ |
-| 11 | Color Swap / Palette Shift | ⬜ |
-| 12 | Pixelation | ⬜ |
-| 13 | Wave Distortion | ⬜ |
-| 14 | **Mini Project**: 2D Character Effects Combo | ⬜ |
+| 08 | Sprite Flash | ✅      |
+| 09 | Dissolve Effect | ⬜      |
+| 10 | Outline Shader | ⬜      |
+| 11 | Color Swap / Palette Shift | ⬜      |
+| 12 | Pixelation | ⬜      |
+| 13 | Wave Distortion | ⬜      |
+| 14 | **Mini Project**: 2D Character Effects Combo | ⬜      |
 
 ### Chapter 3: Noise & Procedural Generation
 | Day | Topic | Status |
