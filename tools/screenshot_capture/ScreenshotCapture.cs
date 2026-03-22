@@ -31,8 +31,12 @@ public partial class ScreenshotCapture : Node
 
     [Export(PropertyHint.Range, "10,30,")]
     public int Fps { get; set; } = 15;
+    
+    [Export(PropertyHint.Range, "0.0,10.0,")]
+    public float StartDelay { get; set; } = 3.0f;
 
     private bool _capturing = false;
+    private float _delayRemaining = 0.0f;
     private float _elapsed = 0.0f;
     private int _frameCount = 0;
     private float _frameInterval = 0.0f;
@@ -41,6 +45,16 @@ public partial class ScreenshotCapture : Node
     public override void _Process(double delta)
     {
         if (!Engine.IsEditorHint() || !_capturing) return;
+        
+        if (_delayRemaining > 0.0f)
+        {
+            _delayRemaining -= (float)delta;
+            if (_delayRemaining <= 0.0f)
+            {
+                GD.Print($"Starting animation capture: {Duration}s at {Fps}fps");
+            }
+            return;
+        }
 
         _elapsed += (float)delta;
         _timeSinceLastFrame += (float)delta;
@@ -104,8 +118,10 @@ public partial class ScreenshotCapture : Node
         _frameCount = 0;
         _frameInterval = 1.0f / Fps;
         _timeSinceLastFrame = _frameInterval; // 첫 프레임 즉시 캡처
-
-        GD.Print($"Starting animation capture: {Duration}s at {Fps}fps");
+        
+        _delayRemaining = StartDelay;
+        _capturing = true;
+        GD.Print($"Animation capture starting in {StartDelay}s...");
     }
 
     private void CaptureFrame()

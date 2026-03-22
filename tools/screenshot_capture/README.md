@@ -29,9 +29,11 @@ ScreenshotCapture (screenshot_capture.tscn)
 
 1. Same setup as above
 2. Set **Duration** (how many seconds to record) and **FPS** (frame rate)
-3. Click the **Capture Animation** button
-4. Wait for the capture to complete (progress is logged in the Output panel)
-5. Convert the frame sequence to GIF using ffmpeg (see below)
+3. Set **Start Delay** if you need time to prepare before recording begins (e.g., navigating to another node to trigger an effect)
+4. Click the **Capture Animation** button
+5. Wait for the delay countdown, then perform your action
+6. Wait for the capture to complete (progress is logged in the Output panel)
+7. Convert the frame sequence to GIF using ffmpeg (see below)
 
 ## Inspector Properties
 
@@ -44,10 +46,11 @@ ScreenshotCapture (screenshot_capture.tscn)
 
 ### Animation Capture
 
-| Property | Description                          | Default |
-|----------|--------------------------------------|---------|
-| Duration | Recording length in seconds          | `2.0`   |
-| FPS      | Frames per second (10–30)            | `15`    |
+| Property    | Description                                            | Default |
+|-------------|--------------------------------------------------------|---------|
+| Duration    | Recording length in seconds                            | `2.0`   |
+| FPS         | Frames per second (10–30)                              | `15`    |
+| Start Delay | Seconds to wait before recording begins (0.0–10.0)    | `3.0`   |
 
 ## Output Format
 
