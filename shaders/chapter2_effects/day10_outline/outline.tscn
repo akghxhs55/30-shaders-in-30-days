@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bytxrk64cq73f"]
+
+[ext_resource type="Script" uid="uid://b8uhncmtrci7y" path="res://shaders/chapter2_effects/day10_outline/Outline.cs" id="1_e8lhi"]
+[ext_resource type="Shader" uid="uid://bdklm357o8aa2" path="res://shaders/chapter2_effects/day10_outline/outline.gdshader" id="1_q4671"]
+[ext_resource type="Texture2D" uid="uid://dktxafisdk030" path="res://assets/textures/icon_transparent.svg" id="2_e8lhi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dsah1"]
+shader = ExtResource("1_q4671")
+shader_parameter/outline_mode = 0
+shader_parameter/sample_count = 16
+shader_parameter/placement = 0
+shader_parameter/thickness = 10.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[node name="Outline" type="Node" unique_id=821691917]
+script = ExtResource("1_e8lhi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1594936309]
+material = SubResource("ShaderMaterial_dsah1")
+texture = ExtResource("2_e8lhi")
+centered = false

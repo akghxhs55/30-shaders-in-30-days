@@ -24,7 +24,7 @@ This project is a structured journey through shader programming, starting from t
 |-----|-------------------------------------------------------------|--------|
 | 08  | [Sprite Flash](shaders/chapter2_effects/day08_sprite_flash) | ✅      |
 | 09  | [Dissolve Effect](shaders/chapter2_effects/day09_dissolve)  | ✅      |
-| 10  | Outline Shader                                              | ⬜      |
+| 10  | [Outline Shader](shaders/chapter2_effects/day10_outline)    | ✅      |
 | 11  | Color Swap / Palette Shift                                  | ⬜      |
 | 12  | Pixelation                                                  | ⬜      |
 | 13  | Wave Distortion                                             | ⬜      |
@@ -79,13 +79,13 @@ This project is a structured journey through shader programming, starting from t
 
 ## Key Concepts by Chapter
 
-| Chapter | Theme | Core Concepts |
-|---------|-------|---------------|
-| 1       | Foundation | UV coordinates, `mix()`, `smoothstep()`, SDF basics, TIME animation |
-| 2       | 2D Effects | Texture sampling, UV distortion, color manipulation |
-| 3       | Procedural | Noise functions, FBM, Voronoi, layering techniques |
-| 4       | 3D & Lighting | Normals, dot product, Fresnel, tangent space |
-| 5       | Post-Processing | Screen-space coordinates, full-screen effects |
+| Chapter | Theme           | Core Concepts                                                       |
+|---------|-----------------|---------------------------------------------------------------------|
+| 1       | Foundation      | UV coordinates, `mix()`, `smoothstep()`, SDF basics, TIME animation |
+| 2       | 2D Effects      | Texture sampling, UV distortion, color manipulation                 |
+| 3       | Procedural      | Noise functions, FBM, Voronoi, layering techniques                  |
+| 4       | 3D & Lighting   | Normals, dot product, Fresnel, tangent space                        |
+| 5       | Post-Processing | Screen-space coordinates, full-screen effects                       |
 
 ## Environment
 
