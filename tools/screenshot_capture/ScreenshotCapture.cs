@@ -17,7 +17,7 @@ public partial class ScreenshotCapture : Node
     }
     private string _fileName = "output.png";
 
-    private string OutputPath => OutputDirectory.TrimEnd('/') + "/" + FileName;
+    private string OutputPath => OutputDirectory + "/" + FileName;
 
     [ExportToolButton("Capture Image", Icon = "SubViewport")]
     private Callable CaptureButton => Callable.From(CaptureScreenshot);
