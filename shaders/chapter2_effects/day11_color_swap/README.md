@@ -54,7 +54,15 @@ The palette texture's U coordinate is driven by the index texture's R value, so 
 
 SVG renderers apply anti-aliasing at color boundaries, producing intermediate R values that map to unintended palette positions. The index texture must be pre-processed so that every pixel snaps to one of the defined R values (0.0, 0.5, 1.0 for three regions) with fully binary alpha.
 
-The included `icon_palette_index.png` was generated from the SVG source by snapping each pixel's RGB to the nearest of the three index colors and thresholding alpha at 0.5. Import it in Godot with Filter set to **Nearest** to prevent runtime interpolation from reintroducing intermediate values.
+The included `icon_palette_index.png` was generated from the SVG source by snapping each pixel's RGB to the nearest of the three index colors and thresholding alpha at 0.5.
+
+Even with a clean index texture, Godot applies linear interpolation to sampler2D uniforms by default, reintroducing intermediate R values at runtime. The `filter_nearest` hint disables this:
+
+```gdshader
+uniform sampler2D index_texture : filter_nearest;
+```
+
+This ensures each pixel samples exactly the R value stored in the texture, with no blending between adjacent pixels.
 
 ---
 

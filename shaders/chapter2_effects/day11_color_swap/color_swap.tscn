@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://tr84qcvqgpxu" path="res://shaders/chapter2_effects/day11_color_swap/ColorSwap.cs" id="1_bbiag"]
 [ext_resource type="Shader" uid="uid://3joo77bvhl8m" path="res://shaders/chapter2_effects/day11_color_swap/color_swap.gdshader" id="1_pc8tn"]
 [ext_resource type="Texture2D" uid="uid://bmfl3m2g0fqxo" path="res://assets/textures/icon_transparent.png" id="4_bbiag"]
-[ext_resource type="Texture2D" uid="uid://chv25j8ct7isl" path="res://assets/textures/icon_palette_index.png" id="4_scuy4"]
+[ext_resource type="Texture2D" uid="uid://bv0iealjpp7s3" path="res://assets/textures/icon_palette_index.png" id="4_scuy4"]
 
 [sub_resource type="Gradient" id="Gradient_bbiag"]
 interpolation_mode = 1
