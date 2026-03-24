@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bwuo28brdh8pk"]
+
+[ext_resource type="Script" uid="uid://tr84qcvqgpxu" path="res://shaders/chapter2_effects/day11_color_swap/ColorSwap.cs" id="1_bbiag"]
+[ext_resource type="Shader" uid="uid://3joo77bvhl8m" path="res://shaders/chapter2_effects/day11_color_swap/color_swap.gdshader" id="1_pc8tn"]
+[ext_resource type="Texture2D" uid="uid://bmfl3m2g0fqxo" path="res://assets/textures/icon_transparent.png" id="4_bbiag"]
+[ext_resource type="Texture2D" uid="uid://chv25j8ct7isl" path="res://assets/textures/icon_palette_index.png" id="4_scuy4"]
+
+[sub_resource type="Gradient" id="Gradient_bbiag"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.4, 0.8)
+colors = PackedColorArray(0, 0, 0, 1, 0.49803922, 0.49803922, 0.49803922, 1, 1, 1, 1, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_scuy4"]
+gradient = SubResource("Gradient_bbiag")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bbiag"]
+shader = ExtResource("1_pc8tn")
+shader_parameter/swap_mode = 0
+shader_parameter/source_colors = Array[Color]([Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0)])
+shader_parameter/target_colors = Array[Color]([Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0)])
+shader_parameter/color_count = 0
+shader_parameter/tolerance = 0.1
+shader_parameter/index_texture = ExtResource("4_scuy4")
+shader_parameter/palette_texture = SubResource("GradientTexture1D_scuy4")
+
+[node name="ColorSwap" type="Node" unique_id=1195862108]
+script = ExtResource("1_bbiag")
+IndexTexture = ExtResource("4_scuy4")
+PaletteTexture = SubResource("GradientTexture1D_scuy4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1472273320]
+material = SubResource("ShaderMaterial_bbiag")
+texture = ExtResource("4_bbiag")
+centered = false

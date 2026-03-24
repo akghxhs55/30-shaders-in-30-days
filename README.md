@@ -25,7 +25,7 @@ This project is a structured journey through shader programming, starting from t
 | 08  | [Sprite Flash](shaders/chapter2_effects/day08_sprite_flash) | ✅      |
 | 09  | [Dissolve Effect](shaders/chapter2_effects/day09_dissolve)  | ✅      |
 | 10  | [Outline Shader](shaders/chapter2_effects/day10_outline)    | ✅      |
-| 11  | Color Swap / Palette Shift                                  | ⬜      |
+| 11  | [Color Swap / Palette Shift](shaders/chapter2_effects/day11_color_swap) | ✅      |
 | 12  | Pixelation                                                  | ⬜      |
 | 13  | Wave Distortion                                             | ⬜      |
 | 14  | **Mini Project**: 2D Character Effects Combo                | ⬜      |
