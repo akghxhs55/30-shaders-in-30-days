@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bd2widl27sdc4"]
+
+[ext_resource type="Script" uid="uid://dkcw4bys6mx16" path="res://shaders/chapter2_effects/day12_pixelation/Pixelation.cs" id="1_rei48"]
+[ext_resource type="Shader" uid="uid://mpmqbgcnyop4" path="res://shaders/chapter2_effects/day12_pixelation/pixelation.gdshader" id="1_xuyjj"]
+[ext_resource type="Texture2D" uid="uid://bmfl3m2g0fqxo" path="res://assets/textures/icon_transparent.png" id="2_xuyjj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rei48"]
+shader = ExtResource("1_xuyjj")
+shader_parameter/pixelation_mode = 0
+shader_parameter/pixel_count = 64
+shader_parameter/sample_count = 4
+shader_parameter/dot_size = 0.5
+
+[node name="Pixelation" type="Node" unique_id=1819452584]
+script = ExtResource("1_rei48")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1839279786]
+material = SubResource("ShaderMaterial_rei48")
+texture = ExtResource("2_xuyjj")
+centered = false

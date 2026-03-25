@@ -13,4 +13,5 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=455511232]
 handle_input_locally = false
+canvas_item_default_texture_filter = 0
 render_target_update_mode = 4
