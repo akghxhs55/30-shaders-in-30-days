@@ -27,7 +27,7 @@ This project is a structured journey through shader programming, starting from t
 | 10  | [Outline Shader](shaders/chapter2_effects/day10_outline)                | ✅      |
 | 11  | [Color Swap / Palette Shift](shaders/chapter2_effects/day11_color_swap) | ✅      |
 | 12  | [Pixelation](shaders/chapter2_effects/day12_pixelation)                 | ✅      |
-| 13  | Wave Distortion                                                         | ⬜      |
+| 13  | [Wave Distortion](shaders/chapter2_effects/day13_wave_distortion)       | ✅      |
 | 14  | **Mini Project**: 2D Character Effects Combo                            | ⬜      |
 
 ### Chapter 3: Noise & Procedural Generation
