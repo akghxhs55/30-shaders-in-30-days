@@ -33,7 +33,7 @@ public partial class ScreenshotCapture : Node
     public int Fps { get; set; } = 15;
     
     [Export(PropertyHint.Range, "0.0,10.0,")]
-    public float StartDelay { get; set; } = 3.0f;
+    public float StartDelay { get; set; } = 0.0f;
 
     private bool _capturing = false;
     private float _delayRemaining = 0.0f;
