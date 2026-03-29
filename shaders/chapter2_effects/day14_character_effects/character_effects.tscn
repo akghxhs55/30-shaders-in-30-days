@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dblaomf2itsk"]
+
+[ext_resource type="Shader" uid="uid://2ce7l02f16s7" path="res://shaders/chapter2_effects/day14_character_effects/character_effects.gdshader" id="1_1jkvw"]
+[ext_resource type="Script" uid="uid://ccj60g8jwtknd" path="res://shaders/chapter2_effects/day14_character_effects/CharacterEffects.cs" id="1_y6d8n"]
+[ext_resource type="Texture2D" uid="uid://bmfl3m2g0fqxo" path="res://assets/textures/icon_transparent.png" id="3_3qgyh"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hg7vy"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_l486h"]
+noise = SubResource("FastNoiseLite_hg7vy")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1jkvw"]
+shader = ExtResource("1_1jkvw")
+shader_parameter/pixelation_size = 1.0
+shader_parameter/frozen_progress = 0.0
+shader_parameter/burned_progress = 0.0
+shader_parameter/resurrect_flash_amount = 0.0
+shader_parameter/hit_flash_amount = 0.0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_l486h")
+shader_parameter/threshold = 0.0
+
+[node name="CharacterEffects" type="Node" unique_id=187711238]
+script = ExtResource("1_y6d8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1264122033]
+material = SubResource("ShaderMaterial_1jkvw")
+position = Vector2(256, 256)
+texture = ExtResource("3_3qgyh")
