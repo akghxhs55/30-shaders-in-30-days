@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Godot;
 
-namespace ShadersIn30Days.tools;
+namespace ShadersIn30Days.tools.screenshot_capture;
 
 [Tool]
 public partial class ScreenshotCapture : Node
@@ -34,6 +34,9 @@ public partial class ScreenshotCapture : Node
     
     [Export(PropertyHint.Range, "0.0,10.0,")]
     public float StartDelay { get; set; } = 0.0f;
+    
+    [Export]
+    public bool AutoExportGif { get; set; } = true;
 
     private bool _capturing = false;
     private float _delayRemaining = 0.0f;
@@ -69,6 +72,9 @@ public partial class ScreenshotCapture : Node
         {
             _capturing = false;
             GD.Print($"Animation capture complete: {_frameCount} frames saved");
+            
+            if (AutoExportGif)
+                ExportGif();
         }
     }
     
@@ -117,7 +123,7 @@ public partial class ScreenshotCapture : Node
         _elapsed = 0.0f;
         _frameCount = 0;
         _frameInterval = 1.0f / Fps;
-        _timeSinceLastFrame = _frameInterval; // 첫 프레임 즉시 캡처
+        _timeSinceLastFrame = _frameInterval;
         
         _delayRemaining = StartDelay;
         _capturing = true;
@@ -130,7 +136,7 @@ public partial class ScreenshotCapture : Node
         if (viewport == null) return;
 
         string baseName = FileName.Replace(".png", "");
-        string framePath = OutputDirectory.TrimEnd('/') + $"/{baseName}_{_frameCount:D4}.png";
+        string framePath = OutputDirectory + $"/{baseName}_{_frameCount:D4}.png";
 
         var image = viewport.GetTexture().GetImage();
         var err = image.SavePng(framePath);
@@ -138,6 +144,45 @@ public partial class ScreenshotCapture : Node
             _frameCount++;
         else
             GD.PrintErr($"Failed to save frame {_frameCount}: {err}");
+    }
+    
+    private void ExportGif()
+    {
+        string baseName = FileName.Replace(".png", "");
+        string dir = ProjectSettings.GlobalizePath(OutputDirectory);
+        GD.Print($"Exporting GIF from frames in {dir} with base name {baseName}");
+        string inputPattern = $"{dir}/{baseName}_%04d.png";
+        string outputPath = $"{dir}/{baseName}.gif";
+
+        string filter = $"fps={Fps},split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse";
+        string[] args = {
+            "-y",
+            "-framerate", Fps.ToString(),
+            "-i", inputPattern,
+            "-vf", filter,
+            outputPath
+        };
+
+        GD.Print($"Exporting GIF: {outputPath}");
+        int exitCode = OS.Execute("ffmpeg", args);
+
+        if (exitCode == 0)
+        {
+            GD.Print($"GIF exported: {outputPath}");
+            int deleted = 0;
+            for (int i = 0; i < _frameCount; i++)
+            {
+                string framePath = $"{dir}/{baseName}_{i:D4}.png";
+                if (System.IO.File.Exists(framePath))
+                {
+                    System.IO.File.Delete(framePath);
+                    deleted++;
+                }
+            }
+            GD.Print($"Cleaned up {deleted} frame files");
+        }
+        else
+            GD.PrintErr($"ffmpeg failed with exit code {exitCode}");
     }
     
     private SubViewport? GetSubViewport() => 
