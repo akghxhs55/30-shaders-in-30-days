@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bx7otjk5rtbq5"]
+
+[ext_resource type="Shader" uid="uid://bg5qbbe5ds21c" path="res://shaders/chapter3_procedural/day15_value_noise/value_noise.gdshader" id="1_466wg"]
+[ext_resource type="Script" uid="uid://dvmv4eqnaqg3l" path="res://shaders/chapter3_procedural/day15_value_noise/ValueNoise.cs" id="1_vsi2t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vsi2t"]
+shader = ExtResource("1_466wg")
+shader_parameter/interpolation = 1
+shader_parameter/frequency = 8.0
+shader_parameter/seed = 0.0
+
+[node name="ValueNoise" type="Node" unique_id=2146294114]
+script = ExtResource("1_vsi2t")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2127496303]
+material = SubResource("ShaderMaterial_vsi2t")
+offset_right = 512.0
+offset_bottom = 512.0

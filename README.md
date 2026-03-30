@@ -31,15 +31,15 @@ This project is a structured journey through shader programming, starting from t
 | 14  | [**Mini Project**: 2D Character Effects Combo](shaders/chapter2_effects/day14_character_effects) | ✅      |
 
 ### Chapter 3: Noise & Procedural Generation
-| Day | Topic                                   | Status |
-|-----|-----------------------------------------|--------|
-| 15  | Value Noise                             | ⬜      |
-| 16  | Perlin/Simplex Noise                    | ⬜      |
-| 17  | FBM (Fractal Brownian Motion)           | ⬜      |
-| 18  | Voronoi / Cellular Noise                | ⬜      |
-| 19  | Procedural Fire                         | ⬜      |
-| 20  | Procedural Water Surface                | ⬜      |
-| 21  | **Mini Project**: Procedural Background | ⬜      |
+| Day | Topic                                                        | Status |
+|-----|--------------------------------------------------------------|--------|
+| 15  | [Value Noise](shaders/chapter3_procedural/day15_value_noise) | ✅      |
+| 16  | Perlin/Simplex Noise                                         | ⬜      |
+| 17  | FBM (Fractal Brownian Motion)                                | ⬜      |
+| 18  | Voronoi / Cellular Noise                                     | ⬜      |
+| 19  | Procedural Fire                                              | ⬜      |
+| 20  | Procedural Water Surface                                     | ⬜      |
+| 21  | **Mini Project**: Procedural Background                      | ⬜      |
 
 ### Chapter 4: 3D & Lighting
 | Day | Topic                                | Status |
