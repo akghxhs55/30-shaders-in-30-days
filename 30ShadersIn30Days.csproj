@@ -19,9 +19,6 @@
     <None Include="**/.gdignore" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="tools/uniform_wrapper_generator/**" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="shaders\chapter2_effects\day11_color_swap\previews\swapped.png" />
+    <Folder Include="tools/uniform_wrapper_generator/" />
   </ItemGroup>
 </Project>
