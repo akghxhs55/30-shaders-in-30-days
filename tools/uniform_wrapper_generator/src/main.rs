@@ -6,7 +6,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
 
     if args.len() < 2 {
-        eprintln!("Usage: wrappergen <path-to-gdshader>");
+        eprintln!("Usage: uniform_wrapper_generator <path-to-gdshader>");
         std::process::exit(1);
     }
 

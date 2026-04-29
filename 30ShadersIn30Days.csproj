@@ -18,7 +18,4 @@
     <None Include="**/.editorconfig" />
     <None Include="**/.gdignore" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="tools/uniform_wrapper_generator/" />
-  </ItemGroup>
 </Project>
