@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://v2cowcln4j2w"]
+
+[ext_resource type="Script" uid="uid://bvm1bsah8o0fa" path="res://shaders/chapter3_procedural/day16_perlin_simplex_noise/PerlinSimplexNoise.cs" id="1_anmdq"]
+[ext_resource type="Shader" uid="uid://ctxowg3upkman" path="res://shaders/chapter3_procedural/day16_perlin_simplex_noise/perlin_simplex_noise.gdshader" id="2_hhkiv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_487jl"]
+shader = ExtResource("2_hhkiv")
+shader_parameter/noise_type = 1
+shader_parameter/frequency = 4.0
+shader_parameter/seed = 0.0
+
+[node name="PerlinSimplexNoise" type="Node" unique_id=2146294114]
+script = ExtResource("1_anmdq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2127496303]
+material = SubResource("ShaderMaterial_487jl")
+offset_right = 512.0
+offset_bottom = 512.0

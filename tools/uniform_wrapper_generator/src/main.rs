@@ -168,7 +168,7 @@ fn generate_range_property(uniform: &UniformInfo, property_name: &str) -> Result
     };
 
     Ok(format!(
-        r#"
+r#"
 [Export(PropertyHint.Range, "{range_args}")]
 public {type_name} {property_name}
 {{
