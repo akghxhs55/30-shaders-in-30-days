@@ -9,7 +9,6 @@ script = ExtResource("1")
 custom_minimum_size = Vector2(512, 512)
 offset_right = 40.0
 offset_bottom = 40.0
-stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=455511232]
 handle_input_locally = false
