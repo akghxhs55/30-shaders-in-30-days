@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c7dcpjot0q1nd"]
+
+[ext_resource type="Shader" uid="uid://cjed777s01oih" path="res://shaders/chapter3_procedural/day17_fbm/fbm.gdshader" id="1_0ns5r"]
+[ext_resource type="Script" uid="uid://lax71a88g07" path="res://shaders/chapter3_procedural/day17_fbm/Fbm.cs" id="1_o3560"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o3560"]
+shader = ExtResource("1_0ns5r")
+shader_parameter/noise_type = 1
+shader_parameter/frequency = 4.0
+shader_parameter/seed = 0.0
+shader_parameter/octaves = 4
+shader_parameter/lacunarity = 2.0
+shader_parameter/gain = 0.5
+
+[node name="Fbm" type="Node" unique_id=503739358]
+script = ExtResource("1_o3560")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=649226650]
+material = SubResource("ShaderMaterial_o3560")
+offset_right = 512.0
+offset_bottom = 512.0
