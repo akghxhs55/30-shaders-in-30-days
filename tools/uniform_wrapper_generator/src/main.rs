@@ -115,8 +115,7 @@ fn generate_enum_property(uniform: &UniformInfo, property_name: &str) -> Result<
         .ok_or_else(|| "Enum members are empty".to_string())?;
 
     Ok(format!(
-        r#"
-public enum {enum_type_name} {{ {identifiers} }}
+r#"public enum {enum_type_name} {{ {identifiers} }}
 
 [Export]
 public {enum_type_name} {property_name}
@@ -129,8 +128,7 @@ public {enum_type_name} {property_name}
         NotifyPropertyListChanged();
     }}
 }}
-private {enum_type_name} _{camel_name} = {enum_type_name}.{default_identifier};
-"#,
+private {enum_type_name} _{camel_name} = {enum_type_name}.{default_identifier};"#,
         identifiers = identifiers.join(", "),
         camel_name = to_camel_case(property_name),
         name = uniform.name,
@@ -168,8 +166,7 @@ fn generate_range_property(uniform: &UniformInfo, property_name: &str) -> Result
     };
 
     Ok(format!(
-r#"
-[Export(PropertyHint.Range, "{range_args}")]
+r#"[Export(PropertyHint.Range, "{range_args}")]
 public {type_name} {property_name}
 {{
     get => _{camel_name};
@@ -179,8 +176,7 @@ public {type_name} {property_name}
         UpdateShaderParam("{name}", value);
     }}
 }}
-private {type_name} _{camel_name} = {default_value};
-"#,
+private {type_name} _{camel_name} = {default_value};"#,
         camel_name = to_camel_case(property_name),
         name = uniform.name,
     ))
@@ -192,8 +188,7 @@ fn generate_default_property(
     type_name: &str,
 ) -> String {
     format!(
-        r#"
-[Export]
+r#"[Export]
 public {type_name} {property_name}
 {{
     get => _{camel_name};
@@ -203,8 +198,7 @@ public {type_name} {property_name}
         UpdateShaderParam("{name}", value);
     }}
 }}
-private {type_name} _{camel_name} = {initializer};
-"#,
+private {type_name} _{camel_name} = {initializer};"#,
         camel_name = to_camel_case(property_name),
         name = uniform.name,
         initializer = convert_initializer(uniform.initializer.as_deref(), type_name),
