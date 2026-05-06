@@ -36,7 +36,7 @@ This project is a structured journey through shader programming, starting from t
 | 15  | [Value Noise](shaders/chapter3_procedural/day15_value_noise)                     | ✅      |
 | 16  | [Perlin & Simplex Noise](shaders/chapter3_procedural/day16_perlin_simplex_noise) | ✅      |                                         | ⬜      |
 | 17  | [FBM](shaders/chapter3_procedural/day17_fbm)                                     | ✅      | (Fractal Brownian Motion)                                                    | ⬜      |
-| 18  | Voronoi / Cellular Noise                                                         | ⬜      |
+| 18  | [Cellular Noise](shaders/chapter3_procedural/day18_cellular_noise)               | ⬜      |
 | 19  | Procedural Fire                                                                  | ⬜      |
 | 20  | Procedural Water Surface                                                         | ⬜      |
 | 21  | **Mini Project**: Procedural Background                                          | ⬜      |

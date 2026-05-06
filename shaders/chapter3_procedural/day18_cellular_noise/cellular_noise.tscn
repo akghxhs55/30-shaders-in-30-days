@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dorojlmcycfrc"]
+
+[ext_resource type="Script" uid="uid://dx3wtck0045im" path="res://shaders/chapter3_procedural/day18_cellular_noise/CellularNoise.cs" id="1_2618s"]
+[ext_resource type="Shader" uid="uid://btkeyxbnrhpou" path="res://shaders/chapter3_procedural/day18_cellular_noise/cellular_noise.gdshader" id="2_gn3w0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_60g0n"]
+shader = ExtResource("2_gn3w0")
+shader_parameter/cell_mode = 2
+shader_parameter/frequency = 4.0
+shader_parameter/seed = 0.0
+
+[node name="CellularNoise" type="Node" unique_id=1686231157]
+script = ExtResource("1_2618s")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=795321718]
+material = SubResource("ShaderMaterial_60g0n")
+offset_right = 512.0
+offset_bottom = 512.0
