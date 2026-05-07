@@ -44,6 +44,7 @@ public partial class ScreenshotCapture : Node
     private int _frameCount = 0;
     private float _frameInterval = 0.0f;
     private float _timeSinceLastFrame = 0.0f;
+    private readonly List<Image> _frameBuffer = [];
 
     public override void _Process(double delta)
     {
@@ -121,7 +122,6 @@ public partial class ScreenshotCapture : Node
 
         _capturing = true;
         _elapsed = 0.0f;
-        _frameCount = 0;
         _frameInterval = 1.0f / Fps;
         _timeSinceLastFrame = _frameInterval;
         
@@ -135,22 +135,27 @@ public partial class ScreenshotCapture : Node
         var viewport = GetSubViewport();
         if (viewport == null) return;
 
-        string baseName = FileName.Replace(".png", "");
-        string framePath = OutputDirectory + $"/{baseName}_{_frameCount:D4}.png";
-
-        var image = viewport.GetTexture().GetImage();
-        var err = image.SavePng(framePath);
-        if (err == Error.Ok)
-            _frameCount++;
-        else
-            GD.PrintErr($"Failed to save frame {_frameCount}: {err}");
+        _frameBuffer.Add(viewport.GetTexture().GetImage());
+        _frameCount++;
     }
     
-    private void ExportGif()
+    private async void ExportGif()
     {
         string baseName = FileName.Replace(".png", "");
         string dir = ProjectSettings.GlobalizePath(OutputDirectory);
         GD.Print($"Exporting GIF from frames in {dir} with base name {baseName}");
+
+        await System.Threading.Tasks.Task.Run(() =>
+        {
+            for (int i = 0; i < _frameBuffer.Count; i++)
+            {
+                string framePath = $"{dir}/{baseName}_{i:D4}.png";
+                _frameBuffer[i].SavePng(framePath);
+            }
+        });
+        
+        _frameBuffer.Clear();
+        
         string inputPattern = $"{dir}/{baseName}_%04d.png";
         string outputPath = $"{dir}/{baseName}.gif";
 
