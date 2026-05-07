@@ -62,7 +62,7 @@ public partial class ScreenshotCapture : Node
         _elapsed += (float)delta;
         _timeSinceLastFrame += (float)delta;
 
-        if (_timeSinceLastFrame >= _frameInterval)
+        while (_timeSinceLastFrame >= _frameInterval)
         {
             _timeSinceLastFrame -= _frameInterval;
             CaptureFrame();

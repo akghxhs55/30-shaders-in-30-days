@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 
 project/assembly_name="30ShadersIn30Days"
 
+[editor]
+
+movie_writer/fps=120
+
 [editor_plugins]
 
 enabled=PackedStringArray()

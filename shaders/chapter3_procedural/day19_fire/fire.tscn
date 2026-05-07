@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://1lxivd84ra42"]
+
+[ext_resource type="Shader" uid="uid://dp5j2bkq1pkmd" path="res://shaders/chapter3_procedural/day19_fire/fire.gdshader" id="1_f5f0b"]
+[ext_resource type="Script" uid="uid://bv11q553uy3iq" path="res://shaders/chapter3_procedural/day19_fire/Fire.cs" id="1_u4uyo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u4uyo"]
+shader = ExtResource("1_f5f0b")
+shader_parameter/speed = 1.0
+shader_parameter/frequency = 4.0
+shader_parameter/warp_strength = 2.0
+shader_parameter/intensity = 2.0
+shader_parameter/threshold = 0.2
+shader_parameter/color_hot = Color(0.922, 0.922, 0.424, 1)
+shader_parameter/color_mid = Color(1, 0.5, 0, 1)
+shader_parameter/color_cool = Color(1, 0, 0, 1)
+
+[node name="Fire" type="Node" unique_id=1348474054]
+script = ExtResource("1_u4uyo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=389934272]
+material = SubResource("ShaderMaterial_u4uyo")
+offset_right = 512.0
+offset_bottom = 512.0
