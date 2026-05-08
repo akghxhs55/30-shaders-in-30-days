@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bt7i0x75p8b3c"]
+
+[ext_resource type="Shader" uid="uid://d3vq3tn304vn3" path="res://shaders/chapter3_procedural/day20_water/water.gdshader" id="1_6sqog"]
+[ext_resource type="Script" uid="uid://dgokyax084pdb" path="res://shaders/chapter3_procedural/day20_water/Water.cs" id="1_s0k2j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s0k2j"]
+shader = ExtResource("1_6sqog")
+shader_parameter/wave_speed = 1.5
+shader_parameter/frequency = 8.0
+shader_parameter/color_deep = Color(0.118, 0.545, 0.651, 1)
+shader_parameter/color_caustic = Color(0.357, 0.769, 0.871, 1)
+shader_parameter/caustic_brightness = 0.4
+
+[node name="Water" type="Node" unique_id=1849193076]
+script = ExtResource("1_s0k2j")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=326236033]
+material = SubResource("ShaderMaterial_s0k2j")
+offset_right = 512.0
+offset_bottom = 512.0

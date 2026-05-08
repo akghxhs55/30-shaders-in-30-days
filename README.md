@@ -37,8 +37,8 @@ This project is a structured journey through shader programming, starting from t
 | 16  | [Perlin & Simplex Noise](shaders/chapter3_procedural/day16_perlin_simplex_noise) | ✅      |
 | 17  | [FBM](shaders/chapter3_procedural/day17_fbm)                                     | ✅      |
 | 18  | [Cellular Noise](shaders/chapter3_procedural/day18_cellular_noise)               | ✅      |
-| 19  | [Procedural Fire](shaders/chapter3_procedural/day19_fire)                        | ⬜      |
-| 20  | Procedural Water Surface                                                         | ⬜      |
+| 19  | [Procedural Fire](shaders/chapter3_procedural/day19_fire)                        | ✅      |
+| 20  | [Procedural Water Surface](shaders/chapter3_procedural/day20_water)              | ✅      |
 | 21  | **Mini Project**: Procedural Background                                          | ⬜      |
 
 ### Chapter 4: 3D & Lighting
@@ -70,11 +70,11 @@ This project is a structured journey through shader programming, starting from t
 │   │   │   ├── UvBasics.cs
 │   │   │   └── README.md
 │   │   └── ...
-│   ├── chapter2_2d_effects/
-│   ├── chapter3_noise/
+│   ├── chapter2_effects/
+│   ├── chapter3_procedural/
 │   ├── chapter4_lighting/
 │   └── chapter5_postprocess/
-├── previews/
+└── previews/
 ```
 
 ## Key Concepts by Chapter
