@@ -31,15 +31,15 @@ This project is a structured journey through shader programming, starting from t
 | 14  | [**Mini Project**: 2D Character Effects Combo](shaders/chapter2_effects/day14_character_effects) | ✅      |
 
 ### Chapter 3: Noise & Procedural Generation
-| Day | Topic                                                                            | Status |
-|-----|----------------------------------------------------------------------------------|--------|
-| 15  | [Value Noise](shaders/chapter3_procedural/day15_value_noise)                     | ✅      |
-| 16  | [Perlin & Simplex Noise](shaders/chapter3_procedural/day16_perlin_simplex_noise) | ✅      |
-| 17  | [FBM](shaders/chapter3_procedural/day17_fbm)                                     | ✅      |
-| 18  | [Cellular Noise](shaders/chapter3_procedural/day18_cellular_noise)               | ✅      |
-| 19  | [Procedural Fire](shaders/chapter3_procedural/day19_fire)                        | ✅      |
-| 20  | [Procedural Water Surface](shaders/chapter3_procedural/day20_water)              | ✅      |
-| 21  | **Mini Project**: Procedural Background                                          | ⬜      |
+| Day | Topic                                                                                   | Status |
+|-----|-----------------------------------------------------------------------------------------|--------|
+| 15  | [Value Noise](shaders/chapter3_procedural/day15_value_noise)                            | ✅      |
+| 16  | [Perlin & Simplex Noise](shaders/chapter3_procedural/day16_perlin_simplex_noise)        | ✅      |
+| 17  | [FBM](shaders/chapter3_procedural/day17_fbm)                                            | ✅      |
+| 18  | [Cellular Noise](shaders/chapter3_procedural/day18_cellular_noise)                      | ✅      |
+| 19  | [Procedural Fire](shaders/chapter3_procedural/day19_fire)                               | ✅      |
+| 20  | [Procedural Water Surface](shaders/chapter3_procedural/day20_water)                     | ✅      |
+| 21  | [**Mini Project**: Procedural Background](shaders/chapter3_procedural/day21_background) | ✅      |
 
 ### Chapter 4: 3D & Lighting
 | Day | Topic                                | Status |
