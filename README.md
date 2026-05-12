@@ -42,15 +42,15 @@ This project is a structured journey through shader programming, starting from t
 | 21  | [**Mini Project**: Procedural Background](shaders/chapter3_procedural/day21_background) | ✅      |
 
 ### Chapter 4: 3D & Lighting
-| Day | Topic                                | Status |
-|-----|--------------------------------------|--------|
-| 22  | Diffuse Lighting (Lambert)           | ⬜      |
-| 23  | Specular (Blinn-Phong)               | ⬜      |
-| 24  | Rim Lighting                         | ⬜      |
-| 25  | Normal Mapping                       | ⬜      |
-| 26  | Toon/Cel Shading                     | ⬜      |
-| 27  | Fresnel + Hologram Effect            | ⬜      |
-| 28  | **Mini Project**: Stylized 3D Object | ⬜      |
+| Day | Topic                                               | Status |
+|-----|-----------------------------------------------------|--------|
+| 22  | Diffuse Lighting (Lambert) + Specular (Blinn-Phong) | ⬜      |
+| 23  | Rim Lighting                                        | ⬜      |
+| 24  | Normal Mapping                                      | ⬜      |
+| 25  | Toon/Cel Shading                                    | ⬜      |
+| 26  | Fresnel + Hologram Effect                           | ⬜      |
+| 27  | Vertex Deformation                                  | ⬜      |
+| 28  | **Mini Project**: Stylized 3D Object                | ⬜      |
 
 ### Chapter 5: Post-Processing & Finale
 | Day | Topic                                                 | Status |
@@ -72,9 +72,11 @@ This project is a structured journey through shader programming, starting from t
 │   │   └── ...
 │   ├── chapter2_effects/
 │   ├── chapter3_procedural/
-│   ├── chapter4_lighting/
+│   ├── chapter4_lighting_3d/
 │   └── chapter5_postprocess/
-└── previews/
+└── tools/
+    ├── screenshot_capture
+    └── uniform_wrapper_generator
 ```
 
 ## Key Concepts by Chapter
@@ -84,7 +86,7 @@ This project is a structured journey through shader programming, starting from t
 | 1       | Foundation      | UV coordinates, `mix()`, `smoothstep()`, SDF basics, TIME animation |
 | 2       | 2D Effects      | Texture sampling, UV distortion, color manipulation                 |
 | 3       | Procedural      | Noise functions, FBM, Voronoi, layering techniques                  |
-| 4       | 3D & Lighting   | Normals, dot product, Fresnel, tangent space                        |
+| 4       | 3D & Lighting   | Normals, dot product, Fresnel, tangent space, vertex deformation    |
 | 5       | Post-Processing | Screen-space coordinates, full-screen effects                       |
 
 ## Environment

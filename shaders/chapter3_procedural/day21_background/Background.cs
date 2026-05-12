@@ -64,8 +64,6 @@ public partial class Background : Node
 		}
 	}
 	private float _starOcclusion = 2.0f;
-
-
 	
 	private ColorRect? GetColorRect()
 	{
