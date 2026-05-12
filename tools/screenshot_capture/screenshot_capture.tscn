@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dwvp4ih7ne1ti" path="res://tools/screenshot_capture/ScreenshotCapture.cs" id="1"]
 
+[sub_resource type="Environment" id="Environment_f8dgx"]
+
 [node name="ScreenshotCapture" type="Node" unique_id=30603517]
 script = ExtResource("1")
 
@@ -14,3 +16,6 @@ offset_bottom = 40.0
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 render_target_update_mode = 4
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport" unique_id=197006376]
+environment = SubResource("Environment_f8dgx")

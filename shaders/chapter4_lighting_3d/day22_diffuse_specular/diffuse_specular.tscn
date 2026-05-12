@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c2cg0uihgm6kh"]
+
+[ext_resource type="Shader" uid="uid://4wa8tv0a7rlr" path="res://shaders/chapter4_lighting_3d/day22_diffuse_specular/diffuse_specular.gdshader" id="1_j16kb"]
+[ext_resource type="Script" uid="uid://0u8mxafsu2x4" path="res://shaders/chapter4_lighting_3d/day22_diffuse_specular/DiffuseSpecular.cs" id="1_sontr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sontr"]
+render_priority = 0
+shader = ExtResource("1_j16kb")
+shader_parameter/shading_mode = 0
+shader_parameter/diffuse_intensity = 1.0
+shader_parameter/specular_intensity = 1.0
+shader_parameter/specular_power = 32.0
+shader_parameter/color = Color(0.063, 0.408, 0.89, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_qbxc2"]
+radius = 1.0
+height = 2.0
+
+[node name="DiffuseSpecular" type="Node" unique_id=1384731164]
+script = ExtResource("1_sontr")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=155887157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=986519286]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=793899486]
+material_override = SubResource("ShaderMaterial_sontr")
+mesh = SubResource("SphereMesh_qbxc2")
