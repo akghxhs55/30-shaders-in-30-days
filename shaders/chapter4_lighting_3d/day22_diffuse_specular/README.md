@@ -12,7 +12,7 @@ This is the first shader in Chapter 4 to use `shader_type spatial`, introducing 
 
 ![Diffuse Only](./previews/diffuse_only.png)
 
-The diffuse term models how a surface scatters incoming light equally in all directions. Brightness depends only on the angle between the surface normal and the light direction — not the viewer's position.
+The diffuse term models how a surface scatters incoming light equally in all directions. Brightness depends only on the angle between the surface normal and the light direction — not the viewer's position. This is the baseline lighting used for almost every non-emissive 3D surface in games.
 
 ```gdshader
 float ndotl = max(0.0, dot(NORMAL, LIGHT));
@@ -27,7 +27,7 @@ vec3 diffuse = ndotl * LIGHT_COLOR;
 
 ![Specular Only](./previews/specular_only.png)
 
-The specular term models mirror-like reflection. Unlike diffuse, it is view-dependent — the highlight shifts as the camera moves. Two methods are available.
+The specular term models mirror-like reflection. Unlike diffuse, it is view-dependent — the highlight shifts as the camera moves. Used to distinguish material types: low `specular_power` approximates rough plastic, high values approximate polished metal or wet surfaces. Two methods are available.
 
 ### Phong
 
@@ -120,6 +120,8 @@ For a directional light with a distant camera, `H` is constant across the surfac
 2. The scene contains a `SubViewport` with a `Camera3D`, `DirectionalLight3D`, and `MeshInstance3D` (sphere)
 3. Select the root node to adjust parameters in the Inspector
 4. Set `Diffuse Intensity` to 0 to isolate the specular component, or `Specular Intensity` to 0 to isolate diffuse
+
+---
 
 ---
 

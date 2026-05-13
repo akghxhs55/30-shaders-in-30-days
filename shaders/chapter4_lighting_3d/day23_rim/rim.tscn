@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://clx3lj6nnnb4b"]
+
+[ext_resource type="Shader" uid="uid://b5bqme5clo1fc" path="res://shaders/chapter4_lighting_3d/day23_rim/rim.gdshader" id="1_al6pc"]
+[ext_resource type="Script" uid="uid://co84f7ps5ygif" path="res://shaders/chapter4_lighting_3d/day23_rim/Rim.cs" id="1_pvukb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pvukb"]
+render_priority = 0
+shader = ExtResource("1_al6pc")
+shader_parameter/rim_type = 0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/rim_power = 4.0
+shader_parameter/rim_intensity = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_2dyko"]
+radius = 1.0
+height = 2.0
+
+[node name="Rim" type="Node" unique_id=1066237772]
+script = ExtResource("1_pvukb")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1118037986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=186778652]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1317770116]
+material_override = SubResource("ShaderMaterial_pvukb")
+mesh = SubResource("SphereMesh_2dyko")

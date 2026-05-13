@@ -42,15 +42,15 @@ This project is a structured journey through shader programming, starting from t
 | 21  | [**Mini Project**: Procedural Background](shaders/chapter3_procedural/day21_background) | ✅      |
 
 ### Chapter 4: 3D & Lighting
-| Day | Topic                                               | Status |
-|-----|-----------------------------------------------------|--------|
-| 22  | Diffuse Lighting (Lambert) + Specular (Blinn-Phong) | ⬜      |
-| 23  | Rim Lighting                                        | ⬜      |
-| 24  | Normal Mapping                                      | ⬜      |
-| 25  | Toon/Cel Shading                                    | ⬜      |
-| 26  | Fresnel + Hologram Effect                           | ⬜      |
-| 27  | Vertex Deformation                                  | ⬜      |
-| 28  | **Mini Project**: Stylized 3D Object                | ⬜      |
+| Day | Topic                                                                                                      | Status |
+|-----|------------------------------------------------------------------------------------------------------------|--------|
+| 22  | [Diffuse Lighting (Lambert) + Specular (Blinn-Phong)](shaders/chapter4_lighting_3d/day22_diffuse_specular) | ✅      |
+| 23  | [Rim Lighting](shaders/chapter4_lighting_3d/day23_rim)                                                     | ✅      |
+| 24  | Normal Mapping                                                                                             | ⬜      |
+| 25  | Toon/Cel Shading                                                                                           | ⬜      |
+| 26  | Fresnel + Hologram Effect                                                                                  | ⬜      |
+| 27  | Vertex Deformation                                                                                         | ⬜      |
+| 28  | **Mini Project**: Stylized 3D Object                                                                       | ⬜      |
 
 ### Chapter 5: Post-Processing & Finale
 | Day | Topic                                                 | Status |
