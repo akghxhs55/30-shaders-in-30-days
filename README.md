@@ -46,7 +46,7 @@ This project is a structured journey through shader programming, starting from t
 |-----|------------------------------------------------------------------------------------------------------------|--------|
 | 22  | [Diffuse Lighting (Lambert) + Specular (Blinn-Phong)](shaders/chapter4_lighting_3d/day22_diffuse_specular) | ✅      |
 | 23  | [Rim Lighting](shaders/chapter4_lighting_3d/day23_rim)                                                     | ✅      |
-| 24  | Normal Mapping                                                                                             | ⬜      |
+| 24  | [Normal Mapping](shaders/chapter4_lighting_3d/day24_normal_mapping)                                        | ✅      |
 | 25  | Toon/Cel Shading                                                                                           | ⬜      |
 | 26  | Fresnel + Hologram Effect                                                                                  | ⬜      |
 | 27  | Vertex Deformation                                                                                         | ⬜      |

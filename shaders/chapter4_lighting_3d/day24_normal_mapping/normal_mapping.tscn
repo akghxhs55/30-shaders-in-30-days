@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://de36fmr40sj8v"]
+
+[ext_resource type="Script" uid="uid://bx6ppx05l8gnl" path="res://shaders/chapter4_lighting_3d/day24_normal_mapping/NormalMapping.cs" id="1_431ng"]
+[ext_resource type="Shader" uid="uid://yh8nimkulrl" path="res://shaders/chapter4_lighting_3d/day24_normal_mapping/normal_mapping.gdshader" id="1_ytrnt"]
+[ext_resource type="Texture2D" uid="uid://da1bjbgo2d16v" path="res://assets/textures/PaintedPlaster010_1K-PNG_NormalGL.png" id="2_q76k3"]
+[ext_resource type="Texture2D" uid="uid://d0gxiti545u4m" path="res://assets/textures/PaintedPlaster010_1K-PNG_Color.png" id="3_q1jpu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rne18"]
+render_priority = 0
+shader = ExtResource("1_ytrnt")
+shader_parameter/use_albedo_map = true
+shader_parameter/use_normal_map = true
+shader_parameter/albedo_map = ExtResource("3_q1jpu")
+shader_parameter/normal_map = ExtResource("2_q76k3")
+
+[sub_resource type="SphereMesh" id="SphereMesh_a3xb5"]
+radius = 1.0
+height = 2.0
+
+[node name="NormalMapping" type="Node" unique_id=1841404998]
+script = ExtResource("1_431ng")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=551234246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=39659595]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1765072558]
+material_override = SubResource("ShaderMaterial_rne18")
+mesh = SubResource("SphereMesh_a3xb5")
