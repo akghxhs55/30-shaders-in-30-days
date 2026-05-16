@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://chiptk4eyx51t"]
+
+[ext_resource type="Shader" uid="uid://du5orhws4xra2" path="res://shaders/chapter4_lighting_3d/day25_toon_shading/toon_shading.gdshader" id="1_lw1bq"]
+[ext_resource type="Shader" uid="uid://do17ujabw8r52" path="res://shaders/chapter4_lighting_3d/day25_toon_shading/outline.gdshader" id="1_m4ech"]
+[ext_resource type="Script" uid="uid://dlf7tc1m37egn" path="res://shaders/chapter4_lighting_3d/day25_toon_shading/ToonShading.cs" id="1_xskw8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xskw8"]
+render_priority = 0
+shader = ExtResource("1_m4ech")
+shader_parameter/outline_thickness = 0.03
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qov2f"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_xskw8")
+shader = ExtResource("1_lw1bq")
+shader_parameter/diffuse_steps = 4
+shader_parameter/specular_threshold = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_lw1bq"]
+radius = 1.0
+height = 2.0
+
+[node name="ToonShading" type="Node" unique_id=1777310071]
+script = ExtResource("1_xskw8")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1062275939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=564126400]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1874014551]
+material_override = SubResource("ShaderMaterial_qov2f")
+mesh = SubResource("SphereMesh_lw1bq")
