@@ -48,7 +48,7 @@ This project is a structured journey through shader programming, starting from t
 | 23  | [Rim Lighting](shaders/chapter4_lighting_3d/day23_rim)                                                     | ✅      |
 | 24  | [Normal Mapping](shaders/chapter4_lighting_3d/day24_normal_mapping)                                        | ✅      |
 | 25  | [Toon/Cel Shading](shaders/chapter4_lighting_3d/day25_toon_shading)                                        | ✅      |
-| 26  | Fresnel + Hologram Effect                                                                                  | ⬜      |
+| 26  | [Environment Mapping](shaders/chapter4_lighting_3d/day26_environment)                                      | ✅      |
 | 27  | Vertex Deformation                                                                                         | ⬜      |
 | 28  | **Mini Project**: Stylized 3D Object                                                                       | ⬜      |
 

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c3by24330lctd"]
+
+[ext_resource type="Shader" uid="uid://ca0vbb6wkwcqu" path="res://shaders/chapter4_lighting_3d/day26_environment/environment.gdshader" id="1_pesmg"]
+[ext_resource type="Texture2D" uid="uid://dyuuup40xu11u" path="res://assets/textures/kloofendal_48d_partly_cloudy_puresky_4k.hdr" id="2_f31ry"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f31ry"]
+render_priority = 0
+shader = ExtResource("1_pesmg")
+shader_parameter/environment_map = ExtResource("2_f31ry")
+
+[sub_resource type="SphereMesh" id="SphereMesh_omfsm"]
+radius = 1.0
+height = 2.0
+
+[node name="Environment" type="Node" unique_id=589012825]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=349402601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=753837914]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=539039692]
+material_override = SubResource("ShaderMaterial_f31ry")
+mesh = SubResource("SphereMesh_omfsm")
