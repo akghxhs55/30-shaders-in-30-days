@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://by7tyodglfm3c"]
+
+[ext_resource type="Shader" uid="uid://dymtp5ci1tc2k" path="res://shaders/chapter4_lighting_3d/day27_vertex_deformation/vertex_deformation.gdshader" id="1_jtrht"]
+[ext_resource type="Script" uid="uid://bo6vmyg5uxvgc" path="res://shaders/chapter4_lighting_3d/day27_vertex_deformation/VertexDeformation.cs" id="1_oxpig"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jtrht"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_oxpig"]
+noise = SubResource("FastNoiseLite_jtrht")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p8jlp"]
+render_priority = 0
+shader = ExtResource("1_jtrht")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_oxpig")
+shader_parameter/amplitude = 0.2
+shader_parameter/frequency = 1.0
+shader_parameter/scroll_speed = 0.5
+shader_parameter/recalculate_normals = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_jtrht"]
+radius = 1.0
+height = 2.0
+
+[node name="VertexDeformation" type="Node" unique_id=110631087]
+script = ExtResource("1_oxpig")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2058353942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1485755434]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=584273618]
+material_override = SubResource("ShaderMaterial_p8jlp")
+mesh = SubResource("SphereMesh_jtrht")
