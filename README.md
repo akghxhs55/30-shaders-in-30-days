@@ -50,7 +50,7 @@ This project is a structured journey through shader programming, starting from t
 | 25  | [Toon/Cel Shading](shaders/chapter4_lighting_3d/day25_toon_shading)                                        | ✅      |
 | 26  | [Environment Mapping](shaders/chapter4_lighting_3d/day26_environment)                                      | ✅      |
 | 27  | [Vertex Deformation](shaders/chapter4_lighting_3d/day27_vertex_deformation)                                | ✅      |
-| 28  | **Mini Project**: Stylized 3D Object                                                                       | ⬜      |
+| 28  | [Mini Project: Stylized Crystal](shaders/chapter4_lighting_3d/day28_crystal)                               | ✅      |
 
 ### Chapter 5: Post-Processing & Finale
 | Day | Topic                                                 | Status |

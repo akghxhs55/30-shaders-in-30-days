@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://jy3s4u876nv4"]
+
+[ext_resource type="Script" uid="uid://cscg0nar8uewk" path="res://shaders/chapter4_lighting_3d/day28_crystal/Crystal.cs" id="1_05qda"]
+[ext_resource type="Shader" uid="uid://c0v0hsx7u3e66" path="res://shaders/chapter4_lighting_3d/day28_crystal/crystal.gdshader" id="1_w8erb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_05qda"]
+render_priority = 0
+shader = ExtResource("1_w8erb")
+shader_parameter/crystal_color = Color(0.282, 0.51, 0.718, 1)
+shader_parameter/fresnel_power = 5.0
+shader_parameter/base_alpha = 0.4
+shader_parameter/refraction_strength = 0.02
+shader_parameter/rim_color = Color(0.212, 0.408, 0.506, 1)
+shader_parameter/rim_power = 3.0
+shader_parameter/rim_intensity = 1.0
+shader_parameter/iridescence_intensity = 0.1
+shader_parameter/specular_strength = 1.0
+shader_parameter/roughness = 0.05
+shader_parameter/inner_color = Color(0.18, 0.553, 0.902, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1s3mw"]
+bottom_radius = 0.0
+height = 1.0
+radial_segments = 8
+rings = 0
+
+[node name="Crystal" type="Node" unique_id=277293800]
+script = ExtResource("1_05qda")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1497013467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=859402305]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=233722691]
+transform = Transform3D(0.49999997, -0.43301272, -0.75, 0, 0.8660254, -0.5, 0.86602545, 0.24999999, 0.43301266, 0, 0, 0)
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="." unique_id=422817827]
+transform = Transform3D(-1, 7.5710346e-08, -4.3711385e-08, 0, 0.49999997, 0.86602545, 8.742278e-08, 0.86602545, -0.49999997, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=412798154]
+transform = Transform3D(0.5125774, 0.09925945, 0.8529313, 0.24999999, 0.9330126, -0.25881904, -0.8214901, 0.34589836, 0.4534251, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_05qda")
+mesh = SubResource("CylinderMesh_1s3mw")
