@@ -53,10 +53,10 @@ This project is a structured journey through shader programming, starting from t
 | 28  | [Mini Project: Stylized Crystal](shaders/chapter4_lighting_3d/day28_crystal)                               | ✅      |
 
 ### Chapter 5: Post-Processing & Finale
-| Day | Topic                                                 | Status |
-|-----|-------------------------------------------------------|--------|
-| 29  | Screen-space Effects (Vignette, Chromatic Aberration) | ⬜      |
-| 30  | **Final Project**: 2048 Shader Edition Prototype      | ⬜      |
+| Day | Topic                                                                       | Status |
+|-----|-----------------------------------------------------------------------------|--------|
+| 29  | [Screen-space Effects](shaders/chapter5_post_processing/day29_screen_space) | ✅      |
+| 30  | **Final Project**: 2048 Shader Edition Prototype                            | ⬜      |
 
 ## Project Structure
 

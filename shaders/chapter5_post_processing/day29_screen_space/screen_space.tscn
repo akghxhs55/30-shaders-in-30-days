@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://hjaltuo5ypsb"]
+
+[ext_resource type="Texture2D" uid="uid://dktxafisdk030" path="res://assets/textures/icon_transparent.svg" id="1_e88df"]
+[ext_resource type="Script" uid="uid://bdb7rfjxdfiqd" path="res://shaders/chapter5_post_processing/day29_screen_space/ScreenSpace.cs" id="1_pr0vi"]
+[ext_resource type="Shader" uid="uid://b1maawgimwc2h" path="res://shaders/chapter5_post_processing/day29_screen_space/screen_space.gdshader" id="2_e2rdy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ulbhe"]
+shader = ExtResource("2_e2rdy")
+shader_parameter/use_barrel_distortion = false
+shader_parameter/barrel_strength = 0.1
+shader_parameter/use_chromatic_aberration = false
+shader_parameter/chromatic_aberration_strength = 0.005
+shader_parameter/use_vignette = false
+shader_parameter/vignette_strength = 1.0
+shader_parameter/vignette_radius = 0.5
+shader_parameter/use_film_grain = false
+shader_parameter/grain_strength = 0.03
+
+[node name="ScreenSpace" type="Node" unique_id=226358872]
+script = ExtResource("1_pr0vi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1127249377]
+texture = ExtResource("1_e88df")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1152367631]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1575361680]
+material = SubResource("ShaderMaterial_ulbhe")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
