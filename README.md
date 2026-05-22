@@ -53,10 +53,10 @@ This project is a structured journey through shader programming, starting from t
 | 28  | [Mini Project: Stylized Crystal](shaders/chapter4_lighting_3d/day28_crystal)                               | ✅      |
 
 ### Chapter 5: Post-Processing & Finale
-| Day | Topic                                                                       | Status |
-|-----|-----------------------------------------------------------------------------|--------|
-| 29  | [Screen-space Effects](shaders/chapter5_post_processing/day29_screen_space) | ✅      |
-| 30  | **Final Project**: 2048 Shader Edition Prototype                            | ⬜      |
+| Day | Topic                                                                             | Status |
+|-----|-----------------------------------------------------------------------------------|--------|
+| 29  | [Screen-space Effects](shaders/chapter5_post_processing/day29_screen_space)       | ✅      |
+| 30  | [Final Project: Procedural Planet](shaders/chapter5_post_processing/day30_planet) | ✅      |
 
 ## Project Structure
 
@@ -73,7 +73,7 @@ This project is a structured journey through shader programming, starting from t
 │   ├── chapter2_effects/
 │   ├── chapter3_procedural/
 │   ├── chapter4_lighting_3d/
-│   └── chapter5_postprocess/
+│   └── chapter5_post_processing/
 └── tools/
     ├── screenshot_capture
     └── uniform_wrapper_generator
@@ -96,6 +96,8 @@ This project is a structured journey through shader programming, starting from t
 ## Resources
 
 - [Godot Shading Language Docs](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/shading_language.html)
+- [Godot Shaders](https://godotshaders.com)
+- [Shadertoy](https://www.shadertoy.com)
 
 ## License
 

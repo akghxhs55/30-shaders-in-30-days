@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ux2jmexnnuvn"]
+
+[ext_resource type="Shader" uid="uid://dmip47xf77br1" path="res://shaders/chapter5_post_processing/day30_planet/planet.gdshader" id="1_bvm8k"]
+[ext_resource type="Script" uid="uid://8bq2i6hc7w28" path="res://shaders/chapter5_post_processing/day30_planet/Planet.cs" id="1_hybs1"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_bvm8k"]
+noise_type = 5
+seed = 51
+frequency = 0.07
+fractal_type = 0
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_hybs1"]
+noise = SubResource("FastNoiseLite_bvm8k")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hybs1"]
+render_priority = 0
+shader = ExtResource("1_bvm8k")
+shader_parameter/color_bottom1 = Color(0.008, 0.4, 0.702, 1)
+shader_parameter/color_middle1 = Color(0.537, 0.702, 0.929, 1)
+shader_parameter/color_top1 = Color(0.875, 0.906, 1, 1)
+shader_parameter/color_bottom2 = Color(0, 0.157, 0.31, 1)
+shader_parameter/color_middle2 = Color(0.02, 0.133, 0.341, 1)
+shader_parameter/color_top2 = Color(0.11, 0.208, 0.38, 1)
+shader_parameter/specular_power = 32.0
+shader_parameter/specular_intensity = 0.15
+shader_parameter/rim_power = 6.000000281740119
+shader_parameter/rim_intensity = 0.50000002375
+shader_parameter/rim_color = Color(0.522, 0.753, 0.871, 1)
+shader_parameter/noise_texture = SubResource("NoiseTexture3D_hybs1")
+
+[sub_resource type="SphereMesh" id="SphereMesh_8hegd"]
+radius = 1.0
+height = 2.0
+
+[node name="Planet" type="Node" unique_id=52634885]
+script = ExtResource("1_hybs1")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=354530552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=626149023]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1736983506]
+transform = Transform3D(-0.5355452, 0, 0.8445675, 0, 1, 0, -0.8445675, 0, -0.5355452, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_hybs1")
+mesh = SubResource("SphereMesh_8hegd")
