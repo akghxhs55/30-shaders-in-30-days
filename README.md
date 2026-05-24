@@ -9,6 +9,8 @@ This project is a structured journey through shader programming, starting from t
 ## Progress
 
 ### Chapter 1: Foundation
+![Dots Spinner](./shaders/chapter1_foundation/day07_spinner/previews/dots_spinner.gif)
+
 | Day | Topic                                                                                    | Status |
 |-----|------------------------------------------------------------------------------------------|--------|
 | 01  | [UV Basics & Visualization](shaders/chapter1_foundation/day01_uv_basics)                 | ✅      |
@@ -20,6 +22,8 @@ This project is a structured journey through shader programming, starting from t
 | 07  | [**Mini Project**: Animated Loading Spinner](shaders/chapter1_foundation/day07_spinner)  | ✅      |
 
 ### Chapter 2: 2D Game Effects
+![Burned](./shaders/chapter2_effects/day14_character_effects/previews/burned.gif)
+
 | Day | Topic                                                                                            | Status |
 |-----|--------------------------------------------------------------------------------------------------|--------|
 | 08  | [Sprite Flash](shaders/chapter2_effects/day08_sprite_flash)                                      | ✅      |
@@ -31,6 +35,8 @@ This project is a structured journey through shader programming, starting from t
 | 14  | [**Mini Project**: 2D Character Effects Combo](shaders/chapter2_effects/day14_character_effects) | ✅      |
 
 ### Chapter 3: Noise & Procedural Generation
+![Background](./shaders/chapter3_procedural/day21_background/previews/background.gif)
+
 | Day | Topic                                                                                   | Status |
 |-----|-----------------------------------------------------------------------------------------|--------|
 | 15  | [Value Noise](shaders/chapter3_procedural/day15_value_noise)                            | ✅      |
@@ -42,6 +48,8 @@ This project is a structured journey through shader programming, starting from t
 | 21  | [**Mini Project**: Procedural Background](shaders/chapter3_procedural/day21_background) | ✅      |
 
 ### Chapter 4: 3D & Lighting
+![Crystal](./shaders/chapter4_lighting_3d/day28_crystal/previews/result.gif)
+
 | Day | Topic                                                                                                      | Status |
 |-----|------------------------------------------------------------------------------------------------------------|--------|
 | 22  | [Diffuse Lighting (Lambert) + Specular (Blinn-Phong)](shaders/chapter4_lighting_3d/day22_diffuse_specular) | ✅      |
@@ -50,13 +58,15 @@ This project is a structured journey through shader programming, starting from t
 | 25  | [Toon/Cel Shading](shaders/chapter4_lighting_3d/day25_toon_shading)                                        | ✅      |
 | 26  | [Environment Mapping](shaders/chapter4_lighting_3d/day26_environment)                                      | ✅      |
 | 27  | [Vertex Deformation](shaders/chapter4_lighting_3d/day27_vertex_deformation)                                | ✅      |
-| 28  | [Mini Project: Stylized Crystal](shaders/chapter4_lighting_3d/day28_crystal)                               | ✅      |
+| 28  | [**Mini Project**: Stylized Crystal](shaders/chapter4_lighting_3d/day28_crystal)                           | ✅      |
 
 ### Chapter 5: Post-Processing & Finale
-| Day | Topic                                                                             | Status |
-|-----|-----------------------------------------------------------------------------------|--------|
-| 29  | [Screen-space Effects](shaders/chapter5_post_processing/day29_screen_space)       | ✅      |
-| 30  | [Final Project: Procedural Planet](shaders/chapter5_post_processing/day30_planet) | ✅      |
+![Planet](./shaders/chapter5_post_processing/day30_planet/previews/result.gif)
+
+| Day | Topic                                                                                 | Status |
+|-----|---------------------------------------------------------------------------------------|--------|
+| 29  | [Screen-space Effects](shaders/chapter5_post_processing/day29_screen_space)           | ✅      |
+| 30  | [**Final Project**: Procedural Planet](shaders/chapter5_post_processing/day30_planet) | ✅      |
 
 ## Project Structure
 
