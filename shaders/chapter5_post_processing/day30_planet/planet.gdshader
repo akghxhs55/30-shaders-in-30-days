@@ -82,6 +82,7 @@ void light() {
     float sharp_diffuse = pow(ndotl, 3.0);
     DIFFUSE_LIGHT += sharp_diffuse * LIGHT_COLOR;
 
+	
 	vec3 h = normalize(LIGHT + VIEW);
 	float spec = pow(max(0.0, dot(NORMAL, h)), specular_power);
 	SPECULAR_LIGHT += spec * LIGHT_COLOR * specular_intensity;
