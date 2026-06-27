@@ -1,4 +1,4 @@
-# Day 07: Mini Project — Animated Loading Spinner
+# Day 07: Animated Loading Spinner
 
 ## Overview
 
